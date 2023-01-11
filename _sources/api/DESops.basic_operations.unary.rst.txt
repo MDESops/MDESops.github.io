@@ -1,0 +1,7 @@
+DESops.basic\_operations.unary module
+=====================================
+
+.. automodule:: DESops.basic_operations.unary
+   :members:
+   :undoc-members:
+   :show-inheritance:

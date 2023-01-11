@@ -1,0 +1,7 @@
+DESops.SDA.maxrobust.construct\_maxrobust module
+================================================
+
+.. automodule:: DESops.SDA.maxrobust.construct_maxrobust
+   :members:
+   :undoc-members:
+   :show-inheritance:

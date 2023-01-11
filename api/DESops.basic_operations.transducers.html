@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.basic_operations.transducers module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.basic_operations.unary module" href="DESops.basic_operations.unary.html" />
+    <link rel="prev" title="DESops.basic_operations.product_NFA module" href="DESops.basic_operations.product_NFA.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.basic_operations.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.composition.html">DESops.basic_operations.composition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.construct_complement.html">DESops.basic_operations.construct_complement module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.construct_reverse.html">DESops.basic_operations.construct_reverse module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html">DESops.basic_operations.cycle_detection module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.generic_functions.html">DESops.basic_operations.generic_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html">DESops.basic_operations.language_equivalence module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.product_NFA.html">DESops.basic_operations.product_NFA module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.basic_operations.transducers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.unary.html">DESops.basic_operations.unary module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.ureach.html">DESops.basic_operations.ureach module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+      <li class="breadcrumb-item active">DESops.basic_operations.transducers module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.basic_operations.transducers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.basic_operations.transducers">
+<span id="desops-basic-operations-transducers-module"></span><h1>DESops.basic_operations.transducers module<a class="headerlink" href="#module-DESops.basic_operations.transducers" title="Permalink to this heading"></a></h1>
+<p>Operations involving transducer automata with events represented by pairs (e_in, e_out)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.auto_auto_parallel_comp">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">auto_auto_parallel_comp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_g_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_h_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bfs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.auto_auto_parallel_comp" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the usual parallel composition or asynchronous product of automata</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.auto_auto_product">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">auto_auto_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_g_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_h_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bfs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.auto_auto_product" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the usual synchronous product of automata</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.generic_product">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">generic_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_attr_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_attr_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_label_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_only_trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_only_trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bfs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.generic_product" title="Permalink to this definition"></a></dt>
+<dd><p>Compute a generic product of two automata with the provided semantics.</p>
+<p>The product is computed with a breadth-first search over pairs of states of <cite>g</cite> and <cite>h</cite>,
+starting with the initial states of <cite>g</cite> and <cite>h</cite>.
+The attributes of the pair of states are computed by applying the provided map <cite>state_attr_map</cite>
+to the attributes in the <cite>attr_list</cite> of the states in the pair.
+Given an outgoing edge from each state in the current pair, an edge is added
+to the product system if it is allowed by the output of <cite>edge_label_map</cite> applied to the labels of each edge.
+The first component of this output is whether the edge should be added, while the second is the resulting label.
+Edges in the product system where only one system transitions are enabled with
+<cite>allow_g_None_trans</cite> and <cite>allow_h_None_trans</cite>.</p>
+<p>Transitions where neither system moves are never allowed</p>
+<p>Parameters:
+g: The first automaton for the product
+h: The second automaton for the product
+state_attr_list: The list of state attributes in the product
+state_attr_map: The map from the attributes of a state of g and a state of h to the attributes in the product state
+edge_label_map: The map from the pairs of labels of a transitions of g and of h to whether the product transition</p>
+<blockquote>
+<div><p>should be allowed and what the corresponding product label is</p>
+</div></blockquote>
+<p>allow_g_None_trans: whether or not to allow a transition where g does not move but h does
+allow_h_None_trans: whether or not to allow a transition where h does not move but g does
+bfs: If True, then construct the product in a breadth-first search manner. If False, then in a parallel manner</p>
+<p>Returns: the product of g and h</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.transducer_auto_product">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">transducer_auto_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_g_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_h_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.transducer_auto_product" title="Permalink to this definition"></a></dt>
+<dd><p>Compute an automaton where the labels of g are replaced according to the transducer t</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.transducer_input_automaton">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">transducer_input_automaton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.transducer_input_automaton" title="Permalink to this definition"></a></dt>
+<dd><p>Construct an automaton representing the input language of the transducer t</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.transducer_output_automaton">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">transducer_output_automaton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.transducer_output_automaton" title="Permalink to this definition"></a></dt>
+<dd><p>Construct an automaton representing the output language of the transducer t</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.transducers.transducer_transducer_product">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.transducers.</span></span><span class="sig-name descname"><span class="pre">transducer_transducer_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_attr_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_g_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_h_None_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.transducers.transducer_transducer_product" title="Permalink to this definition"></a></dt>
+<dd><p>Compute a transducer where the inputs of t are mapped to corresponding outputs in g</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.basic_operations.product_NFA.html" class="btn btn-neutral float-left" title="DESops.basic_operations.product_NFA module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.basic_operations.unary.html" class="btn btn-neutral float-right" title="DESops.basic_operations.unary module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

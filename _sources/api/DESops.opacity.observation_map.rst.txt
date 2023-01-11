@@ -1,0 +1,7 @@
+DESops.opacity.observation\_map module
+======================================
+
+.. automodule:: DESops.opacity.observation_map
+   :members:
+   :undoc-members:
+   :show-inheritance:

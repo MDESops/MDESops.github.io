@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.random_automata.generate module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">DESops API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">DESops.random_automata.generate module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.random_automata.generate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.random_automata.generate">
+<span id="desops-random-automata-generate-module"></span><h1>DESops.random_automata.generate module<a class="headerlink" href="#module-DESops.random_automata.generate" title="Permalink to this heading"></a></h1>
+<p>Functions used for randomly generating automata
+The implementation is modified from the FsmGenerator in the VEiP GitLab repository</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.generate">
+<span class="sig-prename descclassname"><span class="pre">DESops.random_automata.generate.</span></span><span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_trans_per_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_trans_per_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">det</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_marked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_uo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_uc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_accesibility</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_max_trans_per_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_self_loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.generate" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a randomly generated automaton</p>
+<p>Events are named as: a b … z aa ab … az ba bb …</p>
+<p>Usage:
+&gt;&gt;&gt; G = generate_automaton()</p>
+<dl class="simple">
+<dt>Note: the currently implemented method for generating automata can</dt><dd><p>potentially reach a point where it is impossible to continue without
+violating the max_trans_per_state specification or rendering parts of
+the the graph inaccesible. This is particularly common for small
+numbers of events or transitions. By default, the generator will
+restart and try again when this problem occurs. This can
+significantly reduce performance. This feature can be disabled
+(allowing the automaton to contain inaccesible portions or violations
+of the max_trans_per_state specification, but potentially improving
+performance) via the enforce_accesibility and
+enforce_max_trans_per_state parameters.</p>
+</dd>
+</dl>
+<p>REQUIRED PARAMETERS:
+num_states: the number of states in the automaton</p>
+<p>num_events: the number of events in the automaton</p>
+<p>OPTIONAL PARAMETERS:
+min_trans_per_state:</p>
+<blockquote>
+<div><p>The minimum number of transitions out of each state
+By default this will be 0</p>
+</div></blockquote>
+<dl>
+<dt>max_trans_per_state:</dt><dd><p>The maximum number of transitions out of each state
+This is not guaranteed to be satisfied, especially when</p>
+<blockquote>
+<div><p>the value is small and close to min_trans_per_state</p>
+</div></blockquote>
+<p>By default this will be num_events</p>
+</dd>
+<dt>det:</dt><dd><p>Whether the automaton is deterministic
+By default it will be deterministic</p>
+</dd>
+<dt>num_init:</dt><dd><p>The number of initial states
+Requires det = False
+Requires 1 &lt;= num_init &lt;= num_states
+By default there will be one initial state (vertex 0)</p>
+</dd>
+<dt>num_marked:</dt><dd><p>The number of marked states
+Requires 0 &lt;= num_marked &lt;= num_states
+By default no states are marked</p>
+</dd>
+<dt>num_secret:</dt><dd><p>The number of secret states
+Requires 0 &lt;= num_secret &lt;= num_states
+By default no states are secret</p>
+</dd>
+<dt>num_uo:</dt><dd><p>The number of events that are unobservable
+Requires 0 &lt;= num_uo &lt;= num_events
+By default no events are unobservable</p>
+</dd>
+<dt>num_uc:</dt><dd><p>The number of events that are uncontrollable
+Requires 0 &lt;= num_uc &lt;= num_events
+By default no events are uncontrollable</p>
+</dd>
+<dt>filename:</dt><dd><p>If specified, the generated automaton will be saved as a pickle file to this location</p>
+</dd>
+<dt>enforce_accesibility:</dt><dd><p>Ensures that every vertex is accesible
+True by default</p>
+</dd>
+<dt>enforce_max_trans_per_state:</dt><dd><p>Ensures that the max_trans_per_state specification is satisfied at all vertices
+True by default</p>
+</dd>
+<dt>prob_self_loop:</dt><dd><p>The probability a self loop is present from 0 to 1. Default value is 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.is_self_loop">
+<span class="sig-prename descclassname"><span class="pre">DESops.random_automata.generate.</span></span><span class="sig-name descname"><span class="pre">is_self_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertex</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#DESops.random_automata.generate.is_self_loop" title="Permalink to this definition"></a></dt>
+<dd><p>Given an automata and vertex, returns True if the vertex contains
+a self loop, and false if it does not</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.random_automata.generate.</span></span><span class="sig-name descname"><span class="pre">randomAutomata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_trans_per_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_trans_per_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">det</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_init</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_marked</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_secret</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_uo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_uc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_accesibility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_max_trans_per_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.find_unused_events">
+<span class="sig-name descname"><span class="pre">find_unused_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.find_unused_events" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all events that are not used by any outgoing transition from the given state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.generate_automaton">
+<span class="sig-name descname"><span class="pre">generate_automaton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.generate_automaton" title="Permalink to this definition"></a></dt>
+<dd><p>The main function that generates the automaton</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.generate_event_names">
+<span class="sig-name descname"><span class="pre">generate_event_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.generate_event_names" title="Permalink to this definition"></a></dt>
+<dd><p>Generates the names for the events and stores them in the list self.event_names</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.initialize_automaton">
+<span class="sig-name descname"><span class="pre">initialize_automaton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.initialize_automaton" title="Permalink to this definition"></a></dt>
+<dd><p>Resets the automaton to be ready for generation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.make_children">
+<span class="sig-name descname"><span class="pre">make_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_init</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.make_children" title="Permalink to this definition"></a></dt>
+<dd><p>Creates children states from the given parent state and moves the
+parent state from self.unprocessed_states to self.processed_states</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.save_unprocessed_children">
+<span class="sig-name descname"><span class="pre">save_unprocessed_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.save_unprocessed_children" title="Permalink to this definition"></a></dt>
+<dd><p>Puts all unprocessed children of the given state into self.unprocessed_children</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.randomAutomata.validate_parameters">
+<span class="sig-name descname"><span class="pre">validate_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.randomAutomata.validate_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Raises an exception if the input parameters were invalid</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.random_automata.generate.self_loop_modifier">
+<span class="sig-prename descclassname"><span class="pre">DESops.random_automata.generate.</span></span><span class="sig-name descname"><span class="pre">self_loop_modifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_self_loop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.random_automata.generate.self_loop_modifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

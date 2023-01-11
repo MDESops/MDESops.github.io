@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.opacity.observation_map module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.opacity.opacity_verification module" href="DESops.opacity.opacity_verification.html" />
+    <link rel="prev" title="DESops.opacity.language_functions module" href="DESops.opacity.language_functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.opacity.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.bisimulation.html">DESops.opacity.bisimulation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.contract_secret_traces.html">DESops.opacity.contract_secret_traces module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edisyn_interface.html">DESops.opacity.edisyn_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edit_automaton.html">DESops.opacity.edit_automaton module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_language_comparison.html">DESops.opacity.k_step_language_comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_state_observer.html">DESops.opacity.k_step_state_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html">DESops.opacity.k_step_trajectory_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html">DESops.opacity.k_step_two_way_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.label_transform.html">DESops.opacity.label_transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.language_functions.html">DESops.opacity.language_functions module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.opacity.observation_map module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.opacity_verification.html">DESops.opacity.opacity_verification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_observer.html">DESops.opacity.secret_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_specification.html">DESops.opacity.secret_specification module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.opacity.html">DESops.opacity package</a></li>
+      <li class="breadcrumb-item active">DESops.opacity.observation_map module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.opacity.observation_map.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.opacity.observation_map">
+<span id="desops-opacity-observation-map-module"></span><h1>DESops.opacity.observation_map module<a class="headerlink" href="#module-DESops.opacity.observation_map" title="Permalink to this heading"></a></h1>
+<p>Class representing observation maps of automata systems.
+For now only static masks are implemented</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.NonDetDynamicMask">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.opacity.observation_map.</span></span><span class="sig-name descname"><span class="pre">NonDetDynamicMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transducer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.NonDetDynamicMask" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DESops.opacity.observation_map.ObservationMap" title="DESops.opacity.observation_map.ObservationMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObservationMap</span></code></a></p>
+<p>Nondeterministic dynamic masks produce observations by mapping a single event
+to a single observation (both possibly ‘’) evolving itself along a transducer automaton</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.NonDetDynamicMask.apply_obs_map">
+<span class="sig-name descname"><span class="pre">apply_obs_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.NonDetDynamicMask.apply_obs_map" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.NonDetDynamicMask.check_applicable">
+<span class="sig-name descname"><span class="pre">check_applicable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.NonDetDynamicMask.check_applicable" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.NonDetDynamicMask.compose">
+<span class="sig-name descname"><span class="pre">compose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.NonDetDynamicMask.compose" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.NonDetDynamicMask.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.NonDetDynamicMask.copy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.NonDetDynamicMask.prepend_observation">
+<span class="sig-name descname"><span class="pre">prepend_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.NonDetDynamicMask.prepend_observation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong></p></li>
+<li><p><strong>obs</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.ObservationMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.opacity.observation_map.</span></span><span class="sig-name descname"><span class="pre">ObservationMap</span></span><a class="headerlink" href="#DESops.opacity.observation_map.ObservationMap" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>An abstract class representing an observation map that can be applied to an automaton
+This maps the behavior of an automaton as a string to observations of this behavior</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.ObservationMap.apply_obs_map">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apply_obs_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.ObservationMap.apply_obs_map" title="Permalink to this definition"></a></dt>
+<dd><p>Construct an automaton encoding observations of the given system</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong> (<em>Automata</em>) – The input automaton</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An automaton representing the observed or output behavior through the map</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata" title="DESops.automata.automata.Automata">Automata</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.ObservationMap.check_applicable">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_applicable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.ObservationMap.check_applicable" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the observation map is applicable to the given system
+i.e., if the behavior of the automaton is contained in the input behavior of the map</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong> (<em>Automata</em>) – The automaton</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not the map is applicable to the given automaton</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.ObservationMap.compose">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">compose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.ObservationMap.compose" title="Permalink to this definition"></a></dt>
+<dd><p>Construct an observation map resulting from applying this map first, followed by another map</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>ObservationMap</em>) – The second observation map</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The composed map</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#DESops.opacity.observation_map.ObservationMap" title="DESops.opacity.observation_map.ObservationMap">ObservationMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.ObservationMap.epsilon">
+<span class="sig-name descname"><span class="pre">epsilon</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#DESops.opacity.observation_map.ObservationMap.epsilon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.ObservationMap.prepend_observation">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prepend_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.ObservationMap.prepend_observation" title="Permalink to this definition"></a></dt>
+<dd><p>Modify this observation map to accept its normal input behavior prepended by the given event
+and output prepended by the given observation</p>
+<p>Useful if the observed automaton is modified with a new initial state, for example as in the label transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> (<em>object</em>) – The prepended event</p></li>
+<li><p><strong>obs</strong> (<em>object</em>) – The prepended observation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The modified map</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#DESops.opacity.observation_map.ObservationMap" title="DESops.opacity.observation_map.ObservationMap">ObservationMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.opacity.observation_map.</span></span><span class="sig-name descname"><span class="pre">SetValuedStaticMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nd_event_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DESops.opacity.observation_map.ObservationMap" title="DESops.opacity.observation_map.ObservationMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObservationMap</span></code></a></p>
+<p>Set valued static masks produce observations by mapping a single event
+to a set of single observations (both possibly ‘’)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.add_observation">
+<span class="sig-name descname"><span class="pre">add_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.add_observation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong></p></li>
+<li><p><strong>obs</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.apply_obs_map">
+<span class="sig-name descname"><span class="pre">apply_obs_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.apply_obs_map" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.check_applicable">
+<span class="sig-name descname"><span class="pre">check_applicable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.check_applicable" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.compose">
+<span class="sig-name descname"><span class="pre">compose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.compose" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.copy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.prepend_observation">
+<span class="sig-name descname"><span class="pre">prepend_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.prepend_observation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong></p></li>
+<li><p><strong>obs</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.remove_observation">
+<span class="sig-name descname"><span class="pre">remove_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.remove_observation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong></p></li>
+<li><p><strong>obs</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.to_NonDetDynamicMask">
+<span class="sig-name descname"><span class="pre">to_NonDetDynamicMask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.to_NonDetDynamicMask" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.SetValuedStaticMask.unobservable_events">
+<span class="sig-name descname"><span class="pre">unobservable_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.SetValuedStaticMask.unobservable_events" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.opacity.observation_map.</span></span><span class="sig-name descname"><span class="pre">StaticMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DESops.opacity.observation_map.ObservationMap" title="DESops.opacity.observation_map.ObservationMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObservationMap</span></code></a></p>
+<p>Static masks produce observations by mapping a single event to a single observation (both possibly ‘’)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.apply_obs_map">
+<span class="sig-name descname"><span class="pre">apply_obs_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.apply_obs_map" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.check_applicable">
+<span class="sig-name descname"><span class="pre">check_applicable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.check_applicable" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.compose">
+<span class="sig-name descname"><span class="pre">compose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.compose" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.copy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.prepend_observation">
+<span class="sig-name descname"><span class="pre">prepend_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.prepend_observation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong></p></li>
+<li><p><strong>obs</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.to_NonDetDynamicMask">
+<span class="sig-name descname"><span class="pre">to_NonDetDynamicMask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.to_NonDetDynamicMask" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.StaticMask.unobservable_events">
+<span class="sig-name descname"><span class="pre">unobservable_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.StaticMask.unobservable_events" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.observation_map.observable_projection_map">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.observation_map.</span></span><span class="sig-name descname"><span class="pre">observable_projection_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.observation_map.observable_projection_map" title="Permalink to this definition"></a></dt>
+<dd><p>Create an observation map representing the projection of observable events for the given automaton</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong> (<em>Automata</em>) – The automaton</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The map representing projection</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#DESops.opacity.observation_map.StaticMask" title="DESops.opacity.observation_map.StaticMask">StaticMask</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.opacity.language_functions.html" class="btn btn-neutral float-left" title="DESops.opacity.language_functions module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.opacity.opacity_verification.html" class="btn btn-neutral float-right" title="DESops.opacity.opacity_verification module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

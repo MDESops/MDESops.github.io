@@ -1,0 +1,7 @@
+DESops.diagnoser.diagnoser module
+=================================
+
+.. automodule:: DESops.diagnoser.diagnoser
+   :members:
+   :undoc-members:
+   :show-inheritance:

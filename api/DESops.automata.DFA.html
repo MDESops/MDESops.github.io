@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.automata.DFA module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.automata.NFA module" href="DESops.automata.NFA.html" />
+    <link rel="prev" title="DESops.automata package" href="DESops.automata.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.automata.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.automata.DFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.NFA.html">DESops.automata.NFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.PFA.html">DESops.automata.PFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.automata.html">DESops.automata.automata module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.event.html">DESops.automata.event module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.automata.html">DESops.automata package</a></li>
+      <li class="breadcrumb-item active">DESops.automata.DFA module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.automata.DFA.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.automata.DFA">
+<span id="desops-automata-dfa-module"></span><h1>DESops.automata.DFA module<a class="headerlink" href="#module-DESops.automata.DFA" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.automata.DFA.DFA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.automata.DFA.</span></span><span class="sig-name descname"><span class="pre">DFA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_DFA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.DFA.DFA" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata" title="DESops.automata.automata.Automata"><code class="xref py py-class docutils literal notranslate"><span class="pre">Automata</span></code></a></p>
+<p>docstring for</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.DFA.DFA.add_edge">
+<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_DFA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.DFA.DFA.add_edge" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an edge to the Automata instance. Edge is created across pair, a tuple
+of vertex indices according to the igraph Graph <cite>add_edge</cite> method.
+Additionlly adds label and probability information as edge attributes, if
+they are optionally provided.</p>
+<p>Note: much faster to add multiple edges at once using add_edges</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>int</em>) – The vertex index of the source. See igraph documentation of
+the <cite>add_edge</cite> method for more details on what is acceptable here.</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – The vertex index of the target</p></li>
+<li><p><strong>label</strong> (<em>object</em>) – optionally provide label for this transition, to be stored
+in the “label” edge keyword attribute</p></li>
+<li><p><strong>prob</strong> (<em>float</em>) – optionally provide probability for this transition (indicating
+stochastic transition), to be stored in the “prob” edge keyword attribute.</p></li>
+<li><p><strong>fill_out</strong> (<em>bool</em>) – If true, then add the outgoing edge to the source in the “out” vertex attribute.</p></li>
+<li><p><strong>Returns the added edge</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.DFA.DFA.add_edges">
+<span class="sig-name descname"><span class="pre">add_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pair_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_DFA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.DFA.DFA.add_edges" title="Permalink to this definition"></a></dt>
+<dd><p>Add an iterable of edges to the Automata instance.
+Calls the igraph Graph <cite>add_edges</cite> method on the underlying graph
+object. Additionally adds label and probability information as
+edge attributes, if they are optionally provided as parallel iterables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pair_list</strong> (<em>Iterable[tuple] or EdgeSeq</em>) – an iterable to be passed to the igraph Graph <cite>add_edges</cite> method,
+which accepts iterables of pairs or an EdgeSeq (see igraph documentation
+for more details on what is acceptable here).</p></li>
+<li><p><strong>labels</strong> (<em>Iterable</em>) – An iterable of labels to attach as
+keyword attributes. Should be parallel to pair_list (e.g., pair n of
+pair_list corresponding to label n of labels). To be stored in the “label”
+edge keyword attribute.</p></li>
+<li><p><strong>probs</strong> (<em>Iterable[float]</em>) – (default None) optionally provide an iterable of probabilities to attach
+as keyword attributes (indicating stochastic transitions). Should be
+parallel to pair_list (e.g., pair n of pair_list corresponds to probability
+n of probs). To be stored in the “prob” edge keyword attribute.</p></li>
+<li><p><strong>fill_out</strong> (<em>bool</em>) – If true, then add the outgoing edges to the source in the “out” vertex attribute.</p></li>
+<li><p><strong>Returns the edge sequence of added edges.</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.DFA.DFA.check_DFA">
+<span class="sig-name descname"><span class="pre">check_DFA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.DFA.DFA.check_DFA" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the automaton is deterministic.</p>
+<p>An instance of <cite>DFA</cite> can become nondeterministic if the <cite>check_DFA</cite> option in <cite>add_edges</cite> is disabled, or
+if the underlying graph was edited through other means.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>True, if the automaton is deterministic</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.DFA.DFA.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.DFA.DFA.copy" title="Permalink to this definition"></a></dt>
+<dd><p>Copy from self to other, as in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.automata.html" class="btn btn-neutral float-left" title="DESops.automata package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.automata.NFA.html" class="btn btn-neutral float-right" title="DESops.automata.NFA module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

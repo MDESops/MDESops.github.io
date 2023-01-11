@@ -1,0 +1,7 @@
+DESops.error module
+===================
+
+.. automodule:: DESops.error
+   :members:
+   :undoc-members:
+   :show-inheritance:

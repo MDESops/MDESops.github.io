@@ -1,0 +1,7 @@
+DESops.basic\_operations.cycle\_detection module
+================================================
+
+.. automodule:: DESops.basic_operations.cycle_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:

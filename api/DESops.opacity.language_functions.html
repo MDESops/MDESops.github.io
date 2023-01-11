@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.opacity.language_functions module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.opacity.observation_map module" href="DESops.opacity.observation_map.html" />
+    <link rel="prev" title="DESops.opacity.label_transform module" href="DESops.opacity.label_transform.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.opacity.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.bisimulation.html">DESops.opacity.bisimulation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.contract_secret_traces.html">DESops.opacity.contract_secret_traces module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edisyn_interface.html">DESops.opacity.edisyn_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edit_automaton.html">DESops.opacity.edit_automaton module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_language_comparison.html">DESops.opacity.k_step_language_comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_state_observer.html">DESops.opacity.k_step_state_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html">DESops.opacity.k_step_trajectory_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html">DESops.opacity.k_step_two_way_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.label_transform.html">DESops.opacity.label_transform module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.opacity.language_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.observation_map.html">DESops.opacity.observation_map module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.opacity_verification.html">DESops.opacity.opacity_verification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_observer.html">DESops.opacity.secret_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_specification.html">DESops.opacity.secret_specification module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.opacity.html">DESops.opacity package</a></li>
+      <li class="breadcrumb-item active">DESops.opacity.language_functions module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.opacity.language_functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.opacity.language_functions">
+<span id="desops-opacity-language-functions-module"></span><h1>DESops.opacity.language_functions module<a class="headerlink" href="#module-DESops.opacity.language_functions" title="Permalink to this heading"></a></h1>
+<p>Functions related to automaton languages</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.H_epoch_NS">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">H_epoch_NS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secret_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.H_epoch_NS" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an automaton that marks any single epoch in which nonsecret behavior occurs</p>
+<p>events: set of (e, S/NS) pairs
+Euo: set of (e, S/NS) pairs that are unobservable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>secret_type</strong></p></li>
+<li><p><strong>events</strong></p></li>
+<li><p><strong>Euo</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.H_epoch_all">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">H_epoch_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.H_epoch_all" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an automaton that marks any single epoch</p>
+<p>events: set of (e, S/NS) pairs
+Euo: set of (e, S/NS) pairs that are unobservable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong></p></li>
+<li><p><strong>Euo</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.H_infinite_NS">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">H_infinite_NS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secret_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.H_infinite_NS" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an automaton that marks strings that exhibit no secret behavior at any point</p>
+<p>events: set of (e, S/NS) pairs
+Euo: set of (e, S/NS) pairs that are unobservable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>secret_type</strong></p></li>
+<li><p><strong>events</strong></p></li>
+<li><p><strong>Euo</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.H_star">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">H_star</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.H_star" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an automaton that marks all strings</p>
+<p>events: set of (e, S/NS) pairs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>events</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.construct_H_NS">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">construct_H_NS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.construct_H_NS" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong></p></li>
+<li><p><strong>joint</strong></p></li>
+<li><p><strong>secret_type</strong></p></li>
+<li><p><strong>events</strong></p></li>
+<li><p><strong>Euo</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.find_path_between">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">find_path_between</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.find_path_between" title="Permalink to this definition"></a></dt>
+<dd><p>Finds a shortest path from a source vertex to a target vertex
+Returns the list of event labels associated with the path
+If any vertex is in both a source and a target, returns an empty list
+If no target vertex can be reached from any source vertex, returns None</p>
+<p>g: the automaton
+source: a vertex ID or a list of vertex IDs
+target: a vertex ID or a list of vertex IDs</p>
+<p>Only one of source and target can be a list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>g</strong></p></li>
+<li><p><strong>source</strong></p></li>
+<li><p><strong>target</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.language_inclusion">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">language_inclusion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Eo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_num_states</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_unincluded_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.language_inclusion" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether the language marked by g is a subset of the language marked by h</p>
+<p>Returns: opaque(, num_states)(, unincluded_path)</p>
+<p>Note: Only use this if the event sets are the same for both automata</p>
+<p>g, h: the two automata
+Eo: the set of observable events
+return_num_states: if True, the number of states in the product g x det(h)^c is returned as an additional value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>g</strong> (<em>Automata</em>) – The automaton on the left side of the inclusion</p></li>
+<li><p><strong>h</strong> (<em>Automata</em>) – The automaton on the right side of the inclusion</p></li>
+<li><p><strong>Eo</strong> (<em>set</em>) – The event set to perform the inclusion over</p></li>
+<li><p><strong>return_num_states</strong> – (Default value = False)</p></li>
+<li><p><strong>return_unincluded_path</strong> – (Default value = False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.language_functions.moore_to_standard">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.language_functions.</span></span><span class="sig-name descname"><span class="pre">moore_to_standard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.language_functions.moore_to_standard" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an automaton that augments every event in g with whether the target vertex is secret
+A new initial vertex is added that reaches each old initial vertex via an e_init event
+The new automaton marks every string that begins with e_init and is followed by a string generated by g</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.opacity.label_transform.html" class="btn btn-neutral float-left" title="DESops.opacity.label_transform module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.opacity.observation_map.html" class="btn btn-neutral float-right" title="DESops.opacity.observation_map module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

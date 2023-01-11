@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.SDA.maxrobust.construct_maxrobust module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">DESops API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">DESops.SDA.maxrobust.construct_maxrobust module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.SDA.maxrobust.construct_maxrobust.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.SDA.maxrobust.construct_maxrobust">
+<span id="desops-sda-maxrobust-construct-maxrobust-module"></span><h1>DESops.SDA.maxrobust.construct_maxrobust module<a class="headerlink" href="#module-DESops.SDA.maxrobust.construct_maxrobust" title="Permalink to this heading"></a></h1>
+<p>Functions relevant to computing the maximal robust supervisor for a system
+afflicted with sensor deception attacks.</p>
+<p>The primary function, construct_maxrobust(), computes the maximal supervisor
+given a system modelled as an automaton represented as an Automata instance.
+Uses a modified version of the VLPPO algorithm to compute control decisions.
+Depending on the priority ordering used, the algorithm will produce different,
+but “comparably permissive” (maximal) supervisors.</p>
+<p>Uses material from the paper “Towards resilient supervisors against sensor
+deception attacks” {better citation here}</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.VLPPOCP">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">VLPPOCP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_ordering</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sm_cont_pat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eur_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.VLPPOCP" title="Permalink to this definition"></a></dt>
+<dd><p>Modified VLPPOCP algorithm (same steps, but control_actions() is slightly different).</p>
+<p>Parameters:
+G: igraph graph for the system model
+PS: present state estimate
+e: last event
+Euc, Euo: sets of uncontrollable/unobservable events
+event_ordering: priority ordering on controllable events for the VLPPO algorithm.</p>
+<blockquote>
+<div><p>For example, the first element has the highest priority when choosing a control
+decision. See the VLPPO algorithm for more details.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>sm_cont_pat: smallest control pattern, defined in section IV part B ‘Computing robust</dt><dd><p>supervisor’.</p>
+</dd>
+</dl>
+<p>bad_states: set of infinite cost states, precomputed.
+Ea: set of compromised/attackable events</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.VLPPOCP_search">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">VLPPOCP_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_ordering</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_pairs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sets_of_states</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.VLPPOCP_search" title="Permalink to this definition"></a></dt>
+<dd><p>Handles search of states &amp; executing the VLPPOCP algorithm.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.augment_plant">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">augment_plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ea_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ea_d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.augment_plant" title="Permalink to this definition"></a></dt>
+<dd><p>Modify Ga: G w/ added events according to def. III.1</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.construct_Gm">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">construct_Gm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Ga</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.construct_Gm" title="Permalink to this definition"></a></dt>
+<dd><p>Create the modified system model Gm</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.construct_maxrobust">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">construct_maxrobust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_crit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_ordering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.construct_maxrobust" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a maximally robust supervisor for plant G</p>
+<p>Parameters:
+G: input Automata</p>
+<dl class="simple">
+<dt>A (default None): known attack strategy (as an igraph graph); if not provided,</dt><dd><p>assumes an all-out attack strategy (considers all possible attacks at each state).</p>
+</dd>
+</dl>
+<p>Ea: set of compromised events (“attackable” events).
+Euo: set of unobservable events
+Euc: set of uncontrollable events</p>
+<dl class="simple">
+<dt>event_ordering: priority ordering on controllable events for the VLPPO algorithm.</dt><dd><p>For example, the first element has the highest priority when choosing a control
+decision. See the VLPPO algorithm for more details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.control_actions">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">control_actions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Elist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sm_cont_pat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eur_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.control_actions" title="Permalink to this definition"></a></dt>
+<dd><p>Modified version of control_actions function w/ smallest control pattern</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.convert_to_graph">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">convert_to_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_pairs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sets_of_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.convert_to_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Converts the supervisor into an igraph graph Rm.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.SDA.maxrobust.construct_maxrobust.get_N">
+<span class="sig-prename descclassname"><span class="pre">DESops.SDA.maxrobust.construct_maxrobust.</span></span><span class="sig-name descname"><span class="pre">get_N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.SDA.maxrobust.construct_maxrobust.get_N" title="Permalink to this definition"></a></dt>
+<dd><p>NX function from VLPPO algorithm.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

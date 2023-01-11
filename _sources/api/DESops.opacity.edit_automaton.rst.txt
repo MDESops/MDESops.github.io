@@ -1,0 +1,7 @@
+DESops.opacity.edit\_automaton module
+=====================================
+
+.. automodule:: DESops.opacity.edit_automaton
+   :members:
+   :undoc-members:
+   :show-inheritance:

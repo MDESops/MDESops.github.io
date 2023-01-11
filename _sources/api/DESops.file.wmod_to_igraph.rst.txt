@@ -1,0 +1,7 @@
+DESops.file.wmod\_to\_igraph module
+===================================
+
+.. automodule:: DESops.file.wmod_to_igraph
+   :members:
+   :undoc-members:
+   :show-inheritance:

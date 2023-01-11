@@ -1,0 +1,15 @@
+DESops.SDA.maxrobust package
+============================
+
+.. automodule:: DESops.SDA.maxrobust
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.SDA.maxrobust.construct_maxrobust

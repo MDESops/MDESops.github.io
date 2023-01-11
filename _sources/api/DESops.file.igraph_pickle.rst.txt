@@ -1,0 +1,7 @@
+DESops.file.igraph\_pickle module
+=================================
+
+.. automodule:: DESops.file.igraph_pickle
+   :members:
+   :undoc-members:
+   :show-inheritance:

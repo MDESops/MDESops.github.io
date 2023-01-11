@@ -1,0 +1,16 @@
+DESops.random\_automata package
+===============================
+
+.. automodule:: DESops.random_automata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.random_automata.generate
+   DESops.random_automata.helpers

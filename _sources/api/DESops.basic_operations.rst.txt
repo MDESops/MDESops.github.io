@@ -1,0 +1,24 @@
+DESops.basic\_operations package
+================================
+
+.. automodule:: DESops.basic_operations
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.basic_operations.composition
+   DESops.basic_operations.construct_complement
+   DESops.basic_operations.construct_reverse
+   DESops.basic_operations.cycle_detection
+   DESops.basic_operations.generic_functions
+   DESops.basic_operations.language_equivalence
+   DESops.basic_operations.product_NFA
+   DESops.basic_operations.transducers
+   DESops.basic_operations.unary
+   DESops.basic_operations.ureach

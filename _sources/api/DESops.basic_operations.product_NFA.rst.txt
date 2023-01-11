@@ -1,0 +1,7 @@
+DESops.basic\_operations.product\_NFA module
+============================================
+
+.. automodule:: DESops.basic_operations.product_NFA
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+DESops.basic\_operations.construct\_reverse module
+==================================================
+
+.. automodule:: DESops.basic_operations.construct_reverse
+   :members:
+   :undoc-members:
+   :show-inheritance:

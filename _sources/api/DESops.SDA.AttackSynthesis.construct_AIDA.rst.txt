@@ -1,0 +1,7 @@
+DESops.SDA.AttackSynthesis.construct\_AIDA module
+=================================================
+
+.. automodule:: DESops.SDA.AttackSynthesis.construct_AIDA
+   :members:
+   :undoc-members:
+   :show-inheritance:

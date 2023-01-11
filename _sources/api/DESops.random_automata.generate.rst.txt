@@ -1,0 +1,7 @@
+DESops.random\_automata.generate module
+=======================================
+
+.. automodule:: DESops.random_automata.generate
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+DESops.opacity.k\_step\_trajectory\_estimator module
+====================================================
+
+.. automodule:: DESops.opacity.k_step_trajectory_estimator
+   :members:
+   :undoc-members:
+   :show-inheritance:

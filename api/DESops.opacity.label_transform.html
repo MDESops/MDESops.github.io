@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.opacity.label_transform module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.opacity.language_functions module" href="DESops.opacity.language_functions.html" />
+    <link rel="prev" title="DESops.opacity.k_step_two_way_observer module" href="DESops.opacity.k_step_two_way_observer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.opacity.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.bisimulation.html">DESops.opacity.bisimulation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.contract_secret_traces.html">DESops.opacity.contract_secret_traces module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edisyn_interface.html">DESops.opacity.edisyn_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edit_automaton.html">DESops.opacity.edit_automaton module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_language_comparison.html">DESops.opacity.k_step_language_comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_state_observer.html">DESops.opacity.k_step_state_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html">DESops.opacity.k_step_trajectory_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html">DESops.opacity.k_step_two_way_observer module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.opacity.label_transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.language_functions.html">DESops.opacity.language_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.observation_map.html">DESops.opacity.observation_map module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.opacity_verification.html">DESops.opacity.opacity_verification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_observer.html">DESops.opacity.secret_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_specification.html">DESops.opacity.secret_specification module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.opacity.html">DESops.opacity package</a></li>
+      <li class="breadcrumb-item active">DESops.opacity.label_transform module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.opacity.label_transform.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.opacity.label_transform">
+<span id="desops-opacity-label-transform-module"></span><h1>DESops.opacity.label_transform module<a class="headerlink" href="#module-DESops.opacity.label_transform" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.label_transform.induced_observation_map">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.label_transform.</span></span><span class="sig-name descname"><span class="pre">induced_observation_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.label_transform.induced_observation_map" title="Permalink to this definition"></a></dt>
+<dd><p>Map an observation map on an automaton g to an observation map on it label transform a</p>
+<p>The provided observation map on g is assumed to only depend on events of g</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>Automata</em>) – The label transform of the system</p></li>
+<li><p><strong>obs_map</strong> (<em>ObservationMap</em>) – The observation map of the original system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An induced observation map on the label transformed system</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap" title="DESops.opacity.observation_map.ObservationMap">ObservationMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.label_transform.label_transform">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.label_transform.</span></span><span class="sig-name descname"><span class="pre">label_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes_to_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.label_transform.label_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Transform an automaton with state attributes to an automaton with events augmented by these labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>g</strong> (<em>Automata</em>) – The automaton with secret states to transform</p></li>
+<li><p><strong>attribute_list</strong> (<em>list: list</em>) – Vertex attributes of the automaton to transform</p></li>
+<li><p><strong>attributes_to_label</strong> (<em>Callable</em>) – Function mapping attribute values to label</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The transformed automaton</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA">NFA</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.opacity.label_transform.transform_secret_labels">
+<span class="sig-prename descclassname"><span class="pre">DESops.opacity.label_transform.</span></span><span class="sig-name descname"><span class="pre">transform_secret_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.opacity.label_transform.transform_secret_labels" title="Permalink to this definition"></a></dt>
+<dd><p>Transform the secret state labels of an automaton to its events</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong> (<em>Automata</em>) – The automaton with secret states to transform</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The transformed automaton, nonsecret events, and initial events</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA">NFA</a>, set, set)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.opacity.k_step_two_way_observer.html" class="btn btn-neutral float-left" title="DESops.opacity.k_step_two_way_observer module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.opacity.language_functions.html" class="btn btn-neutral float-right" title="DESops.opacity.language_functions module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

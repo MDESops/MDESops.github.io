@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.automata package &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.automata.DFA module" href="DESops.automata.DFA.html" />
+    <link rel="prev" title="DESops API" href="../api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DESops.automata package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.DFA.html">DESops.automata.DFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.NFA.html">DESops.automata.NFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.PFA.html">DESops.automata.PFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.automata.html">DESops.automata.automata module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.event.html">DESops.automata.event module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+      <li class="breadcrumb-item active">DESops.automata package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.automata.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.automata">
+<span id="desops-automata-package"></span><h1>DESops.automata package<a class="headerlink" href="#module-DESops.automata" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DESops.automata.DFA.html">DESops.automata.DFA module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA"><code class="docutils literal notranslate"><span class="pre">DFA</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA.add_edge"><code class="docutils literal notranslate"><span class="pre">DFA.add_edge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA.add_edges"><code class="docutils literal notranslate"><span class="pre">DFA.add_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA.check_DFA"><code class="docutils literal notranslate"><span class="pre">DFA.check_DFA()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA.copy"><code class="docutils literal notranslate"><span class="pre">DFA.copy()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.automata.NFA.html">DESops.automata.NFA module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA"><code class="docutils literal notranslate"><span class="pre">NFA</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.add_edge"><code class="docutils literal notranslate"><span class="pre">NFA.add_edge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.add_edges"><code class="docutils literal notranslate"><span class="pre">NFA.add_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.copy"><code class="docutils literal notranslate"><span class="pre">NFA.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.delete_vertices"><code class="docutils literal notranslate"><span class="pre">NFA.delete_vertices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.delete_vertices_no_warning"><code class="docutils literal notranslate"><span class="pre">NFA.delete_vertices_no_warning()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.get_destinations"><code class="docutils literal notranslate"><span class="pre">NFA.get_destinations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA.trans"><code class="docutils literal notranslate"><span class="pre">NFA.trans()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.automata.PFA.html">DESops.automata.PFA module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.PFA.html#DESops.automata.PFA.PFA"><code class="docutils literal notranslate"><span class="pre">PFA</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.PFA.html#DESops.automata.PFA.PFA.add_edge"><code class="docutils literal notranslate"><span class="pre">PFA.add_edge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.PFA.html#DESops.automata.PFA.PFA.add_edges"><code class="docutils literal notranslate"><span class="pre">PFA.add_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.PFA.html#DESops.automata.PFA.PFA.copy"><code class="docutils literal notranslate"><span class="pre">PFA.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.PFA.html#DESops.automata.PFA.PFA.generate_out"><code class="docutils literal notranslate"><span class="pre">PFA.generate_out()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.automata.automata.html">DESops.automata.automata module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata"><code class="docutils literal notranslate"><span class="pre">Automata</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.active_events"><code class="docutils literal notranslate"><span class="pre">Automata.active_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.add_critical_state"><code class="docutils literal notranslate"><span class="pre">Automata.add_critical_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.add_edge"><code class="docutils literal notranslate"><span class="pre">Automata.add_edge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.add_edges"><code class="docutils literal notranslate"><span class="pre">Automata.add_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.add_vertex"><code class="docutils literal notranslate"><span class="pre">Automata.add_vertex()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.add_vertices"><code class="docutils literal notranslate"><span class="pre">Automata.add_vertices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.compute_state_costs"><code class="docutils literal notranslate"><span class="pre">Automata.compute_state_costs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.copy"><code class="docutils literal notranslate"><span class="pre">Automata.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.delete_edges"><code class="docutils literal notranslate"><span class="pre">Automata.delete_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.delete_vertices"><code class="docutils literal notranslate"><span class="pre">Automata.delete_vertices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.ecount"><code class="docutils literal notranslate"><span class="pre">Automata.ecount()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.events_between"><code class="docutils literal notranslate"><span class="pre">Automata.events_between()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.generate_out"><code class="docutils literal notranslate"><span class="pre">Automata.generate_out()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.next_states"><code class="docutils literal notranslate"><span class="pre">Automata.next_states()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.summary"><code class="docutils literal notranslate"><span class="pre">Automata.summary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.trans"><code class="docutils literal notranslate"><span class="pre">Automata.trans()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.unobservable_reach"><code class="docutils literal notranslate"><span class="pre">Automata.unobservable_reach()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.update_names"><code class="docutils literal notranslate"><span class="pre">Automata.update_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata.vcount"><code class="docutils literal notranslate"><span class="pre">Automata.vcount()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.UnobservableReach"><code class="docutils literal notranslate"><span class="pre">UnobservableReach</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.UnobservableReach.empty"><code class="docutils literal notranslate"><span class="pre">UnobservableReach.empty()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.UnobservableReach.from_set"><code class="docutils literal notranslate"><span class="pre">UnobservableReach.from_set()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.automata.event.html">DESops.automata.event module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event.name"><code class="docutils literal notranslate"><span class="pre">Event.name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../api.html" class="btn btn-neutral float-left" title="DESops API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.automata.DFA.html" class="btn btn-neutral float-right" title="DESops.automata.DFA module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

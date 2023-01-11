@@ -1,0 +1,7 @@
+DESops.automata.event module
+============================
+
+.. automodule:: DESops.automata.event
+   :members:
+   :undoc-members:
+   :show-inheritance:

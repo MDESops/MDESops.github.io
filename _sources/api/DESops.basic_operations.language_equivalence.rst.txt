@@ -1,0 +1,7 @@
+DESops.basic\_operations.language\_equivalence module
+=====================================================
+
+.. automodule:: DESops.basic_operations.language_equivalence
+   :members:
+   :undoc-members:
+   :show-inheritance:

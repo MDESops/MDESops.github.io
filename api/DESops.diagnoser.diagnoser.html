@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.diagnoser.diagnoser module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">DESops API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">DESops.diagnoser.diagnoser module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.diagnoser.diagnoser.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.diagnoser.diagnoser">
+<span id="desops-diagnoser-diagnoser-module"></span><h1>DESops.diagnoser.diagnoser module<a class="headerlink" href="#module-DESops.diagnoser.diagnoser" title="Permalink to this heading"></a></h1>
+<p>Funcions relevant to event diagnosis.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.BFS_Euo_search">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">BFS_Euo_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.BFS_Euo_search" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function for prime automata to find all reachable unobservable events.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.BFS_marked_states">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">BFS_marked_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prime_marked_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.diagnoser.diagnoser.BFS_marked_states" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function for the verifier to make sure all appropriate states are marked.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.create_GN">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">create_GN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.create_GN" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the GN, an automaton without the given target event.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.delete_all_specific_edge">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">delete_all_specific_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.delete_all_specific_edge" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes all instances of a specific event (target) in a copy of a given automata (G) and returns the copy.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.delete_obs_events">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">delete_obs_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.delete_obs_events" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes all observable events in an automaton.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.diagnoser">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">diagnoser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.diagnoser" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the diagnoser automaton of the input G based on the target event</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.ext_diag_test">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">ext_diag_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.ext_diag_test" title="Permalink to this definition"></a></dt>
+<dd><p>Performs extended diagnoser test based on given automaton and event.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.extended_diagnoser">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">extended_diagnoser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.extended_diagnoser" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an extended diagnoser automata given an automata
+and target event</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.find_Y_cycle">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">find_Y_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.diagnoser.diagnoser.find_Y_cycle" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all cycles that solely contain ‘Y’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.is_uncertain">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">is_uncertain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.is_uncertain" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a boolean value based on whether or not a given state is uncertain.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.polynomial_test">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">polynomial_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.polynomial_test" title="Permalink to this definition"></a></dt>
+<dd><p>Performs the polynomial test on a given automaton and event.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.prime_automata">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">prime_automata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.prime_automata" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a prime automata based on a given automata and
+target event and dictionary that shows the previous state of each vertex</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.diagnoser.diagnoser.verifier">
+<span class="sig-prename descclassname"><span class="pre">DESops.diagnoser.diagnoser.</span></span><span class="sig-name descname"><span class="pre">verifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G_f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DESops.automata.event.html#DESops.automata.event.Event" title="DESops.automata.event.Event"><span class="pre">Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.diagnoser.diagnoser.verifier" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the verifier automata of the input G_f based on the target event</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

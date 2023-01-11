@@ -1,0 +1,16 @@
+DESops.SDA.AttackSynthesis package
+==================================
+
+.. automodule:: DESops.SDA.AttackSynthesis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.SDA.AttackSynthesis.construct_AIDA
+   DESops.SDA.AttackSynthesis.pruning

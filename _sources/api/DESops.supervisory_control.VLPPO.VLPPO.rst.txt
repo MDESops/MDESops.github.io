@@ -1,0 +1,7 @@
+DESops.supervisory\_control.VLPPO.VLPPO module
+==============================================
+
+.. automodule:: DESops.supervisory_control.VLPPO.VLPPO
+   :members:
+   :undoc-members:
+   :show-inheritance:

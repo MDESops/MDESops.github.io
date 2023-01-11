@@ -1,0 +1,7 @@
+DESops.supervisory\_control.AES.AES module
+==========================================
+
+.. automodule:: DESops.supervisory_control.AES.AES
+   :members:
+   :undoc-members:
+   :show-inheritance:

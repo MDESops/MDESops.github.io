@@ -1,0 +1,19 @@
+DESops.file package
+===================
+
+.. automodule:: DESops.file
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.file.fsm_to_bdd
+   DESops.file.fsm_to_igraph
+   DESops.file.igraph_pickle
+   DESops.file.igraph_to_fsm
+   DESops.file.wmod_to_igraph

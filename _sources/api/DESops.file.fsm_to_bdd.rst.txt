@@ -1,0 +1,7 @@
+DESops.file.fsm\_to\_bdd module
+===============================
+
+.. automodule:: DESops.file.fsm_to_bdd
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+DESops.opacity.bisimulation module
+==================================
+
+.. automodule:: DESops.opacity.bisimulation
+   :members:
+   :undoc-members:
+   :show-inheritance:

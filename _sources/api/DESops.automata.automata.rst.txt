@@ -1,0 +1,7 @@
+DESops.automata.automata module
+===============================
+
+.. automodule:: DESops.automata.automata
+   :members:
+   :undoc-members:
+   :show-inheritance:

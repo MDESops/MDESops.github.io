@@ -1,0 +1,7 @@
+DESops.opacity.label\_transform module
+======================================
+
+.. automodule:: DESops.opacity.label_transform
+   :members:
+   :undoc-members:
+   :show-inheritance:

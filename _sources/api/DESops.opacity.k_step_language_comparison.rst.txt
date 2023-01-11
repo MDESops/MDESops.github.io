@@ -1,0 +1,7 @@
+DESops.opacity.k\_step\_language\_comparison module
+===================================================
+
+.. automodule:: DESops.opacity.k_step_language_comparison
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+DESops.basic\_operations.generic\_functions module
+==================================================
+
+.. automodule:: DESops.basic_operations.generic_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:

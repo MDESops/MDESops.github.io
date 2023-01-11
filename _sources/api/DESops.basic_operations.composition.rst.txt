@@ -1,0 +1,7 @@
+DESops.basic\_operations.composition module
+===========================================
+
+.. automodule:: DESops.basic_operations.composition
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+DESops.opacity.k\_step\_state\_observer module
+==============================================
+
+.. automodule:: DESops.opacity.k_step_state_observer
+   :members:
+   :undoc-members:
+   :show-inheritance:

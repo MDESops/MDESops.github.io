@@ -1,0 +1,7 @@
+DESops.basic\_operations.construct\_complement module
+=====================================================
+
+.. automodule:: DESops.basic_operations.construct_complement
+   :members:
+   :undoc-members:
+   :show-inheritance:

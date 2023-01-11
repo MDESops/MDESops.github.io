@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.basic_operations.cycle_detection module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.basic_operations.generic_functions module" href="DESops.basic_operations.generic_functions.html" />
+    <link rel="prev" title="DESops.basic_operations.construct_reverse module" href="DESops.basic_operations.construct_reverse.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.basic_operations.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.composition.html">DESops.basic_operations.composition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.construct_complement.html">DESops.basic_operations.construct_complement module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.construct_reverse.html">DESops.basic_operations.construct_reverse module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.basic_operations.cycle_detection module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.generic_functions.html">DESops.basic_operations.generic_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html">DESops.basic_operations.language_equivalence module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.product_NFA.html">DESops.basic_operations.product_NFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.transducers.html">DESops.basic_operations.transducers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.unary.html">DESops.basic_operations.unary module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.ureach.html">DESops.basic_operations.ureach module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+      <li class="breadcrumb-item active">DESops.basic_operations.cycle_detection module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.basic_operations.cycle_detection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.basic_operations.cycle_detection">
+<span id="desops-basic-operations-cycle-detection-module"></span><h1>DESops.basic_operations.cycle_detection module<a class="headerlink" href="#module-DESops.basic_operations.cycle_detection" title="Permalink to this heading"></a></h1>
+<p>Functions relevant to cycle detection.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.cycle_detection.</span></span><span class="sig-name descname"><span class="pre">JohnsonsAlgorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Computes johnson’s algorithm, returns a list of
+all cycles in a given automata.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.create_sub_graph">
+<span class="sig-name descname"><span class="pre">create_sub_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DFS_vertices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.create_sub_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Given a starting index, creates a new subgraph excluding
+vertices with a DFS index less than the index</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.find_least_vertex">
+<span class="sig-name descname"><span class="pre">find_least_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subgraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.find_least_vertex" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.is_self_loop">
+<span class="sig-name descname"><span class="pre">is_self_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.is_self_loop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.simple_cycles">
+<span class="sig-name descname"><span class="pre">simple_cycles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.simple_cycles" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.simple_cycles_util">
+<span class="sig-name descname"><span class="pre">simple_cycles_util</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.simple_cycles_util" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.unblock">
+<span class="sig-name descname"><span class="pre">unblock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.unblock" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.TarjansAlgorithm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.cycle_detection.</span></span><span class="sig-name descname"><span class="pre">TarjansAlgorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.TarjansAlgorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data structure for computing tarjans algorithm.
+This constructs a list of strongly connected components along with their DFS index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>g</strong> (<a class="reference internal" href="DESops.automata.automata.html#DESops.automata.automata.Automata" title="DESops.automata.automata.Automata"><em>Automata</em></a><em> or </em><em>igraph.Graph</em>) – The automaton or graph used in the algorithm</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.TarjansAlgorithm.DFS">
+<span class="sig-name descname"><span class="pre">DFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.TarjansAlgorithm.DFS" title="Permalink to this definition"></a></dt>
+<dd><p>Depth first search algorithm that returns
+the order in which vertices were visited</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>initial</strong> (<em>igraph.Vertex</em>) – The  vertex to start the DFS at</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The list of visited vertices</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.TarjansAlgorithm.strongly_connected_components">
+<span class="sig-name descname"><span class="pre">strongly_connected_components</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.TarjansAlgorithm.strongly_connected_components" title="Permalink to this definition"></a></dt>
+<dd><p>Driver function for tarjan’s algorithm.
+Computes the strongly connected components of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>initial</strong> (<em>object</em>) – The name of the vertex to initialize the algorithm at.
+Note components not reachable from here will not be found.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The list of found strongly connected components.
+Each component is a list of the vertices in the component
+and the corresponding DFS index in which they were visited.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[tuple[igraph.Vertex, int]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.contains_cycle">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.cycle_detection.</span></span><span class="sig-name descname"><span class="pre">contains_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="DESops.automata.DFA.html#DESops.automata.DFA.DFA" title="DESops.automata.DFA.DFA"><span class="pre">DFA</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="DESops.automata.NFA.html#DESops.automata.NFA.NFA" title="DESops.automata.NFA.NFA"><span class="pre">NFA</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.contains_cycle" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if graph is cyclic otherwise it is false.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.contains_cycle_util">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.cycle_detection.</span></span><span class="sig-name descname"><span class="pre">contains_cycle_util</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stack</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.contains_cycle_util" title="Permalink to this definition"></a></dt>
+<dd><p>Floyd’s algorithm helper function.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.basic_operations.cycle_detection.is_self_loop">
+<span class="sig-prename descclassname"><span class="pre">DESops.basic_operations.cycle_detection.</span></span><span class="sig-name descname"><span class="pre">is_self_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertex</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#DESops.basic_operations.cycle_detection.is_self_loop" title="Permalink to this definition"></a></dt>
+<dd><p>Given an automata and vertex, returns True if the vertex contains
+a self loop, and false if it does not</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.basic_operations.construct_reverse.html" class="btn btn-neutral float-left" title="DESops.basic_operations.construct_reverse module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.basic_operations.generic_functions.html" class="btn btn-neutral float-right" title="DESops.basic_operations.generic_functions module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

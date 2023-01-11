@@ -1,0 +1,7 @@
+DESops.opacity.opacity\_verification module
+===========================================
+
+.. automodule:: DESops.opacity.opacity_verification
+   :members:
+   :undoc-members:
+   :show-inheritance:

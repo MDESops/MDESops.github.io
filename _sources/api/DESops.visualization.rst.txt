@@ -1,0 +1,16 @@
+DESops.visualization package
+============================
+
+.. automodule:: DESops.visualization
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.visualization.plot
+   DESops.visualization.write_svg

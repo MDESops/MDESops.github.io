@@ -1,0 +1,7 @@
+DESops.SDA.robust.construct\_robust module
+==========================================
+
+.. automodule:: DESops.SDA.robust.construct_robust
+   :members:
+   :undoc-members:
+   :show-inheritance:

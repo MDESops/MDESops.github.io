@@ -1,0 +1,19 @@
+DESops.automata package
+=======================
+
+.. automodule:: DESops.automata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.automata.DFA
+   DESops.automata.NFA
+   DESops.automata.PFA
+   DESops.automata.automata
+   DESops.automata.event

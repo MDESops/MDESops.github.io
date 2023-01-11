@@ -1,0 +1,7 @@
+DESops.file.fsm\_to\_igraph module
+==================================
+
+.. automodule:: DESops.file.fsm_to_igraph
+   :members:
+   :undoc-members:
+   :show-inheritance:

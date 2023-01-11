@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.supervisory_control.VLPPO.VLPPO module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">DESops API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">DESops.supervisory_control.VLPPO.VLPPO module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.supervisory_control.VLPPO.VLPPO.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.supervisory_control.VLPPO.VLPPO">
+<span id="desops-supervisory-control-vlppo-vlppo-module"></span><h1>DESops.supervisory_control.VLPPO.VLPPO module<a class="headerlink" href="#module-DESops.supervisory_control.VLPPO.VLPPO" title="Permalink to this heading"></a></h1>
+<p>Functions related to computing a maximal controllable and observable supervisor
+for a given system &amp; specification automaton.</p>
+<p>offline_VLPPO(), implemented here, is used in an interface to Automata objects
+in the Automata class declaration (Automata/Automata.py)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.VLPPO">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">VLPPO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_ordering</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eur_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.VLPPO" title="Permalink to this definition"></a></dt>
+<dd><p>Implementation of VLPPO algorithm:
+G: system automata
+Euc: set of uncontrollable events
+Euo: set of unobservable events
+PS: set of possible states system could be in upon execution of this iteration
+event: observable event that occured last
+good_states: set of states in G that are legal (0 cost); states not in this list are illegal (inf cost)</p>
+<p>Returns a list [ACT, PS_new] as the new control decision set &amp; new best estimate of the
+present state, respectively.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.control_action">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">control_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eur_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.control_action" title="Permalink to this definition"></a></dt>
+<dd><p>Given event ordering and set of next states, determine control action ACT
+G: system Automata
+NS: best estimate of the next set of states under the potential new control decision.
+E_list: ordered set of controllable events (priority ordering as first element</p>
+<blockquote>
+<div><p>has the highest priority.)</p>
+</div></blockquote>
+<p>Euc: set of uncontrollable events
+Euo: set of unobservable events
+bad_states: states with infinite cost</p>
+<p>Returns ACT, the next set of control decisions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.convert_to_graph">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">convert_to_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sets_of_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_pairs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.convert_to_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Convert graph info into igraph graph P
+Euc, Euo to add attributes to edges in P
+initial_set: the unobservable-reach from state 0 in G (which set of states the system starts in)
+Assumed that P is non-empty</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.ext_ur_from_set">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">ext_ur_from_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_of_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ACT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eur_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.ext_ur_from_set" title="Permalink to this definition"></a></dt>
+<dd><p>Find extended_ureach for each state in set_of_states.</p>
+<p>set_of_states: states to begin from
+g: igraph Graph object
+ACT: events to consider
+Euo: set of unobservable events in g</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.get_N">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">get_N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.get_N" title="Permalink to this definition"></a></dt>
+<dd><p>N_sigma operator defined in paper, to be used in main algorithm step 1
+Given present set of states PS, returns next set of states NS
+where NS are states {x exists in X: x = delta(y, event) for y exists on S}
+Event must be within the event set or null-event (condition comes from N-function definition)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.offline_VLPPO">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">offline_VLPPO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_ordering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supervisor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.offline_VLPPO" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Returns an Automata object which is a maximal controllable &amp; observable supervisor of</dt><dd><p>the given system and specification Automata.</p>
+</dd>
+</dl>
+<p>Parameters:
+plant: Automata representing the plant/system.
+spec: Either an automata representing the specification or a set of critical states</p>
+<blockquote>
+<div><p>(names of states in plant)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>event_ordering: optionally provide a priority list of controllable events;</dt><dd><p>if not provided, an arbitrary ordering will be used (the set of controllable
+events will be found as a python set(), and then casting the set into a list()).</p>
+</dd>
+<dt>X_crit (default None): if the specification only intends to disable states in the plant,</dt><dd><p>those vertices can be provided directly (slightly more efficient, as the specification
+associated with a list of bad states would already be a subautomaton of the system,
+skipping the step in offline_VLPPO_i where the system &amp; spec are constructed again as
+subautomata). Can be provided as a list or iterable of vertice names.</p>
+</dd>
+<dt>construct_SA (default True): flag to construct an equivalent G’, H’ from the system G and</dt><dd><p>specification H such that H’ is a subautomata of G’. Set to False if the input spec is
+already a subautomata of the input system or X_crit was provided (the specification
+is just a disabling of certain states in the system).</p>
+</dd>
+</dl>
+<p>The sets of uncontrollable and unobservable events, Euc and Euo respectively,
+are found as the unions of the Euc &amp; Euo sets in the plant &amp; specification.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DESops.supervisory_control.VLPPO.VLPPO.search_VLPPO">
+<span class="sig-prename descclassname"><span class="pre">DESops.supervisory_control.VLPPO.VLPPO.</span></span><span class="sig-name descname"><span class="pre">search_VLPPO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sets_of_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_pairs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ACT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_ordering</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eur_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.supervisory_control.VLPPO.VLPPO.search_VLPPO" title="Permalink to this definition"></a></dt>
+<dd><p>Executes VLPPO for a set of states PS
+BFS with queue (Q). Uses VLPPO algorithm with present
+state estimate (PS) and associated control decision (ACT) to compute next state estimate (NS) and
+new control decision set (ACT_new).</p>
+<p>G: system Automata.
+Euc, Euo: sets of uncontrollable/unobservable events.
+PS: initial best state estimate.</p>
+<p>Collects states and transitions for the resulting Automata:
+sets_of_states: stores frozenset’s of state estimates.
+edge_labels: list of labels for transitions (parallel list to edge_pairs)
+edge_pairs: list of tuples as (source set, target set).</p>
+<p>ACT: initial control decision for the first state-estimate PS
+Note: ACT is encoded into states implicitly as the transitions allowed from each set of states
+(there will be a transition for all labels in ACT, although unobservable transitions only
+form self loops; observable and controllable transitions will execute VLPPO() and find a new
+state estimate to transition to).</p>
+<dl class="simple">
+<dt>event_ordering: priority ordering of controllable events, with largest priorty going</dt><dd><p>to the first element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

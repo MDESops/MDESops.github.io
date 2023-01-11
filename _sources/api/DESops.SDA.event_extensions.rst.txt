@@ -1,0 +1,7 @@
+DESops.SDA.event\_extensions module
+===================================
+
+.. automodule:: DESops.SDA.event_extensions
+   :members:
+   :undoc-members:
+   :show-inheritance:

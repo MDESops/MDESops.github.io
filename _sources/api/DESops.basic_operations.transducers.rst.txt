@@ -1,0 +1,7 @@
+DESops.basic\_operations.transducers module
+===========================================
+
+.. automodule:: DESops.basic_operations.transducers
+   :members:
+   :undoc-members:
+   :show-inheritance:

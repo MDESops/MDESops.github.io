@@ -1,0 +1,15 @@
+DESops.SDA.robust package
+=========================
+
+.. automodule:: DESops.SDA.robust
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.SDA.robust.construct_robust

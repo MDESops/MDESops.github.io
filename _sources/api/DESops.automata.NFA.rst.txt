@@ -1,0 +1,7 @@
+DESops.automata.NFA module
+==========================
+
+.. automodule:: DESops.automata.NFA
+   :members:
+   :undoc-members:
+   :show-inheritance:

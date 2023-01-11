@@ -1,0 +1,25 @@
+DESops.SDA package
+==================
+
+.. automodule:: DESops.SDA
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.SDA.AttackSynthesis
+   DESops.SDA.maxrobust
+   DESops.SDA.robust
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.SDA.event_extensions

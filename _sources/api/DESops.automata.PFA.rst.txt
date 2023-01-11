@@ -1,0 +1,7 @@
+DESops.automata.PFA module
+==========================
+
+.. automodule:: DESops.automata.PFA
+   :members:
+   :undoc-members:
+   :show-inheritance:

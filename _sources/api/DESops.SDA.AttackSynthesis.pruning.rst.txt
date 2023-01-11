@@ -1,0 +1,7 @@
+DESops.SDA.AttackSynthesis.pruning module
+=========================================
+
+.. automodule:: DESops.SDA.AttackSynthesis.pruning
+   :members:
+   :undoc-members:
+   :show-inheritance:

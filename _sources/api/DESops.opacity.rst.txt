@@ -1,0 +1,28 @@
+DESops.opacity package
+======================
+
+.. automodule:: DESops.opacity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.opacity.bisimulation
+   DESops.opacity.contract_secret_traces
+   DESops.opacity.edisyn_interface
+   DESops.opacity.edit_automaton
+   DESops.opacity.k_step_language_comparison
+   DESops.opacity.k_step_state_observer
+   DESops.opacity.k_step_trajectory_estimator
+   DESops.opacity.k_step_two_way_observer
+   DESops.opacity.label_transform
+   DESops.opacity.language_functions
+   DESops.opacity.observation_map
+   DESops.opacity.opacity_verification
+   DESops.opacity.secret_observer
+   DESops.opacity.secret_specification

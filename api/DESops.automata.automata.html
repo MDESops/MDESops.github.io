@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.automata.automata module &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.automata.event module" href="DESops.automata.event.html" />
+    <link rel="prev" title="DESops.automata.PFA module" href="DESops.automata.PFA.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="DESops.automata.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.DFA.html">DESops.automata.DFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.NFA.html">DESops.automata.NFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.PFA.html">DESops.automata.PFA module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DESops.automata.automata module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.automata.event.html">DESops.automata.event module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+          <li class="breadcrumb-item"><a href="DESops.automata.html">DESops.automata package</a></li>
+      <li class="breadcrumb-item active">DESops.automata.automata module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.automata.automata.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.automata.automata">
+<span id="desops-automata-automata-module"></span><h1>DESops.automata.automata module<a class="headerlink" href="#module-DESops.automata.automata" title="Permalink to this heading"></a></h1>
+<p>Automata class &amp; methods:
+Used to represent finite-state automata, by means of a directed
+graph object (from the igraph library) with labelled transitions.</p>
+<p>Implemented here is the abstract base class _Automata.</p>
+<p>Use DFA, NFA or PFA classes instead.</p>
+<p>Provides access to many useful methods in discrete event systems,
+e.g. parallel &amp; product compositions or observer construction.</p>
+<p>In general, these operations can be performed as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># For automata A , B:</span>
+<span class="n">A_par_B</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">composition</span><span class="o">.</span><span class="n">parallel</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">obs_A</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">composition</span><span class="o">.</span><span class="n">observer</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Automata can be constructed by ‘fsm’ filetypes, providing easy
+interface with DESUMA.
+Alternatively, Automata can be created starting from an underlying
+igraph Graph object.</p>
+<p>The Automata structure is a directed graph with labelled transitions,
+implemented as an igraph Graph object (member var ‘_graph’).
+Vertex names and edge labels can be accessed via the igraph Graph
+<cite>EdgeSeq</cite> and <cite>VertexSeq</cite> methods, accessed for an Automata G as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vert_seq</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">vs</span><span class="p">()</span>
+<span class="n">edge_seq</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">es</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note that the vs() and es() methods for the Automata class are directly bound to
+the vs() and es() methods for the igraph Graph class.
+vs() and es() have dict-like behavior for accessing attributes, which are used here
+to store edge labels and vertex names, e.g</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vert_name_list</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="n">edge_label_list</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">es</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>And to access specific entries by value or index:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vert_index_7</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">edge_name_a</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">es</span><span class="p">(</span><span class="n">label_eq</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="c1"># if multiple edges labelled &#39;a&#39;, returns first by index</span>
+</pre></div>
+</div>
+<p>In many cases, information relevant to vertices &amp; edges are stored in attributes. For example,
+in PFA, probabilities of a transition occuring are stored in the “prob” attribute, e.g</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prob_trans_a</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">es</span><span class="p">(</span><span class="n">label_eq</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)[</span><span class="s2">&quot;prob&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Vertices and Edges can be named/labelled after their creation by accessing the
+“name”/”label” attribute in the VertexSeq/EdgeSeq dict:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">E</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that the this process cannot be used to update individual entries.
+For example, the following code will NOT change the name of vertex ‘E’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span> <span class="c1"># WILL NOT MODIFY THE VERTEX NAME</span>
+</pre></div>
+</div>
+<p>Instead, the <cite>update_attributes()</cite> method must be used to modify specific edge or vertex
+attributes. These are igraph Graph Edge and Vertex methods. For details on these methods,
+see the igraph Edge and Vertex class documentations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">}</span>
+<span class="n">G</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">update_attributes</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="c1"># Name of vertex 4 is now &#39;F&#39;</span>
+<span class="n">G</span><span class="o">.</span><span class="n">es</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">update_attributes</span><span class="p">({</span><span class="s2">&quot;label&quot;</span> <span class="p">:</span> <span class="s1">&#39;b&#39;</span><span class="p">})</span> <span class="c1"># Change edge 0 label from &#39;a&#39; to &#39;b&#39;</span>
+</pre></div>
+</div>
+<p>More details on using the vs() and es() methods can be found in the igraph documentation.
+For simply using the Automata class, further functionality than described here might not be
+required. Implementing new functionality might however require the use of certain specific
+igraph functions or methods. Having these bindings also means that many times passing an Automata
+to a function (implemented here) expecting an igraph Graph will still function normally.
+Useful in cases like product and parallel compositions (product_comp() and parallel_comp(),
+but might cause some unintended problems?</p>
+<p>Further details of how the igraph library is used are included in the implementation files.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.automata.automata.</span></span><span class="sig-name descname"><span class="pre">Automata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Used to represent finite-state automata, by means of a directed
+graph object (from the igraph library) with labelled transitions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Euc</strong> (<em>set</em>) – The uncontrollable events</p></li>
+<li><p><strong>Euo</strong> (<em>set</em>) – The unobservable events</p></li>
+<li><p><strong>events</strong> (<em>set</em>) – The set of all events</p></li>
+<li><p><strong>_graph</strong> (<em>ig.Graph</em>) – underlying igraph Graph instance storing the Automata structure. Contains the
+original EdgeSeq and VertexSeq objects bound by the es() and vs() functions here.
+Usage of DESops should never require directly modifying the igraph Graph member.
+However, implementing new methods might require interfacing with igraph classes
+and functions.</p></li>
+<li><p><strong>X_crit</strong> (<em>set</em>) – The set of critical states, stored as names of states (not indices)</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The ‘type’ of the Automata (DFA, NFA, PFA, etc.)</p></li>
+<li><p><strong>es</strong> (<em>ig.EdgeSeq</em>) – <p>binding to igraph Graph ‘edgeSeq’ object, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edgeSeqObj</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">es</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edgeSeqObj</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">_graph</span><span class="o">.</span><span class="n">es</span><span class="p">()</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>vs</strong> (<em>ig.VertexSeq</em>) – <p>binding to igraph Graph ‘vertSeq’ object, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vertSeqObj</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">vs</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vertSeqObj</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">_graph</span><span class="o">.</span><span class="n">vs</span><span class="p">()</span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.active_events">
+<span class="sig-name descname"><span class="pre">active_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.active_events" title="Permalink to this definition"></a></dt>
+<dd><p>Return the set of events that can occur from the given vertex index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the source vertex</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The active events at the source</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.add_critical_state">
+<span class="sig-name descname"><span class="pre">add_critical_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_crit_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.add_critical_state" title="Permalink to this definition"></a></dt>
+<dd><p>Add the state with the given name to the set of critical states.</p>
+<p>Alternative to adding a critical state:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">add_critical_state</span><span class="p">(</span><span class="s1">&#39;critical_state_name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">X_crit</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;critical_state_name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X_crit_state</strong> (<em>object</em>) – The name of the critical state to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.add_edge">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.add_edge" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an edge to the Automata instance. Edge is created across pair, a tuple
+of vertex indices according to the igraph Graph <cite>add_edge</cite> method.
+Additionlly adds label and probability information as edge attributes, if
+they are optionally provided.</p>
+<p>Note: much faster to add multiple edges at once using add_edges</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>int</em>) – The vertex index of the source. See igraph documentation of
+the <cite>add_edge</cite> method for more details on what is acceptable here.</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – The vertex index of the target</p></li>
+<li><p><strong>label</strong> (<em>object</em>) – optionally provide label for this transition, to be stored
+in the “label” edge keyword attribute</p></li>
+<li><p><strong>prob</strong> (<em>float</em>) – optionally provide probability for this transition (indicating
+stochastic transition), to be stored in the “prob” edge keyword attribute.</p></li>
+<li><p><strong>fill_out</strong> (<em>bool</em>) – If true, then add the outgoing edge to the source in the “out” vertex attribute.</p></li>
+<li><p><strong>Returns the added edge</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.add_edges">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pair_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.add_edges" title="Permalink to this definition"></a></dt>
+<dd><p>Add an iterable of edges to the Automata instance.
+Calls the igraph Graph <cite>add_edges</cite> method on the underlying graph
+object. Additionally adds label and probability information as
+edge attributes, if they are optionally provided as parallel iterables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pair_list</strong> (<em>Iterable[tuple] or EdgeSeq</em>) – an iterable to be passed to the igraph Graph <cite>add_edges</cite> method,
+which accepts iterables of pairs or an EdgeSeq (see igraph documentation
+for more details on what is acceptable here).</p></li>
+<li><p><strong>labels</strong> (<em>Iterable</em>) – An iterable of labels to attach as
+keyword attributes. Should be parallel to pair_list (e.g., pair n of
+pair_list corresponding to label n of labels). To be stored in the “label”
+edge keyword attribute.</p></li>
+<li><p><strong>probs</strong> (<em>Iterable[float]</em>) – (default None) optionally provide an iterable of probabilities to attach
+as keyword attributes (indicating stochastic transitions). Should be
+parallel to pair_list (e.g., pair n of pair_list corresponds to probability
+n of probs). To be stored in the “prob” edge keyword attribute.</p></li>
+<li><p><strong>fill_out</strong> (<em>bool</em>) – If true, then add the outgoing edges to the source in the “out” vertex attribute.</p></li>
+<li><p><strong>Returns the edge sequence of added edges.</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.add_vertex">
+<span class="sig-name descname"><span class="pre">add_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.add_vertex" title="Permalink to this definition"></a></dt>
+<dd><p>Add a vertex or state to the automaton.
+Calls the igraph Graph <cite>add_vertex</cite> method on the underlying graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>object</em>) – The name of the vertex</p></li>
+<li><p><strong>marked</strong> (<em>bool or None</em>) – If true, the vertex is marked</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – Names and values assigned to the vertex attributes (not implemented)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.add_vertices">
+<span class="sig-name descname"><span class="pre">add_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_vertices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.add_vertices" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a number of vertices or states to the automaton.
+Calls the igraph Graph <cite>add_vertices</cite> method on the underlying graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_vertices</strong> (<em>int</em>) – The number of vertices to add</p></li>
+<li><p><strong>name</strong> (<em>Iterable or None</em>) – The names of the vertices</p></li>
+<li><p><strong>marked</strong> (<em>Iterable or bool or None</em>) – The markings of the vertices</p></li>
+<li><p><strong>**kwargs</strong> (<em>dict</em>) – Names and values assigned uniformly to the vertex attributes (not implemented)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.compute_state_costs">
+<span class="sig-name descname"><span class="pre">compute_state_costs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">starting_states</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Euc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.compute_state_costs" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the uncontrollable traces preceding states in starting_states.
+Used to find invalid states, e.g. those which transition uncontrollably to critical states.</p>
+<p>TODO: check if this particular automata has an ingoing adjacency list generated already
+and if so, use that.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>starting_states</strong> (<em>Iterable[int] or None</em>) – Vertex indices to search from, default behavior is to convert
+states in automata attr X_crit to vertex indices and uses these.</p></li>
+<li><p><strong>Euc</strong> (<em>set or None</em>) – optionally specify uncontrollable event set. If None, uses automata Euc attr.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Bad vertex indices, which includes states in starting_states.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.copy" title="Permalink to this definition"></a></dt>
+<dd><p>Copy from self to other, as in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>TODO &lt;<a class="reference external" href="mailto:awintenb&#37;&#52;&#48;umich&#46;edu">awintenb<span>&#64;</span>umich<span>&#46;</span>edu</a>&gt; This needs to be an abstract method?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.delete_edges">
+<span class="sig-name descname"><span class="pre">delete_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">es</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.delete_edges" title="Permalink to this definition"></a></dt>
+<dd><p>Proxy to igraph delete_edges.
+Might invalidate reachability, this function will not compute trim after deleting edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>es</strong> (<em>EdgeSeq</em>) – The edge sequence to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.delete_vertices">
+<span class="sig-name descname"><span class="pre">delete_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.delete_vertices" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes vertex seq vs.
+Uses igraph delete_vertices method.</p>
+<p>Updates out attr: since there is no default “in” attribute,
+out is regenerated entirely.</p>
+<p>Faster to use fewer delete_vertices() calls with larger inputs vs
+than multiple calls with smaller inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vs</strong> (<em>ig.VertexSeq</em>) – The vertex sequence to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.ecount">
+<span class="sig-name descname"><span class="pre">ecount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.ecount" title="Permalink to this definition"></a></dt>
+<dd><p>Return the number of edges in the Automata.
+Binding to igraph Graph <cite>ecount</cite> method.
+This is the preferred method to find edge count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Edge count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.events_between">
+<span class="sig-name descname"><span class="pre">events_between</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.events_between" title="Permalink to this definition"></a></dt>
+<dd><p>Return the set of events that transition the system from X1 to X2
+X1 and X2 should each be either a single vertex index, or iterable collections of vertex indices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X1</strong> (<em>int or Iterable[int]</em>) – The indices of the source vertices</p></li>
+<li><p><strong>X2</strong> (<em>int or Iterable[int]</em>) – The indices of the target vertices</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The event labels from sources and targets</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.generate_out">
+<span class="sig-name descname"><span class="pre">generate_out</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.generate_out" title="Permalink to this definition"></a></dt>
+<dd><p>Generates the “out” attribute for a graph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">automata</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;out&quot;</span><span class="p">][</span><span class="n">v</span><span class="p">]</span> <span class="o">//</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="n">target</span> <span class="n">vert</span><span class="p">,</span> <span class="n">event</span> <span class="n">transition</span><span class="p">),</span> <span class="p">(</span><span class="o">...</span><span class="p">),</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.next_states">
+<span class="sig-name descname"><span class="pre">next_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.next_states" title="Permalink to this definition"></a></dt>
+<dd><p>Return the set of vertex indices that can be reached from the given vertex index in a single event</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of source vertex</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The next states</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_state_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.summary" title="Permalink to this definition"></a></dt>
+<dd><p>Summarize the automaton in a readable string format.
+Requires the out attribute. See <cite>generate_out</cite>.</p>
+<p>TODO Would there be other useful things to print here?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>use_state_names</strong> (<em>bool</em>) – If True, then print the “name” attribute of the vertices, otherwise print the index</p></li>
+<li><p><strong>lines</strong> (<em>int or None</em>) – The maximum number of lines to print. None indicates no limit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The summary of the automaton</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.trans">
+<span class="sig-name descname"><span class="pre">trans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.trans" title="Permalink to this definition"></a></dt>
+<dd><p>Return a target vertex index reached when the given event occurs from the given source vertex index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>int</em>) – The index of the source vertex</p></li>
+<li><p><strong>event</strong> (<em>object</em>) – The label of the outgoing transitions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The index of the target vertex</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.unobservable_reach">
+<span class="sig-name descname"><span class="pre">unobservable_reach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#DESops.automata.automata.Automata.unobservable_reach" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the set of states in the unobservable reach from the given state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.update_names">
+<span class="sig-name descname"><span class="pre">update_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.update_names" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.Automata.vcount">
+<span class="sig-name descname"><span class="pre">vcount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.Automata.vcount" title="Permalink to this definition"></a></dt>
+<dd><p>Return the number of vertices in the Automata.
+Binding to igraph Graph <cite>vcount</cite> method.
+This is the preferred method to find vertex count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Vertex count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DESops.automata.automata.UnobservableReach">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DESops.automata.automata.</span></span><span class="sig-name descname"><span class="pre">UnobservableReach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Euo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.UnobservableReach" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for saving unobservable reach computations</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.UnobservableReach.empty">
+<span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.UnobservableReach.empty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DESops.automata.automata.UnobservableReach.from_set">
+<span class="sig-name descname"><span class="pre">from_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_of_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeze_result</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DESops.automata.automata.UnobservableReach.from_set" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the unobersvable reach from a set of starting states, considering unobservable events</p>
+<p>set_of_states: collection of state indices to start from
+events: set of events to consider as unobservable.</p>
+<blockquote>
+<div><p>Default ‘None’: uses parent Automata Euo attribute</p>
+</div></blockquote>
+<p>If using cache and set_of_states and events are NOT hashable types, this function will construct frozensets
+from each in order to use hashing.</p>
+<dl class="simple">
+<dt>If a key has already been cached, but a not-frozenset was stored and key is now accessed with freeze_result=True:</dt><dd><p>Return a frozenset of the previously stored result, so as to return what’s expected.
+Currently overwrites the val (where dict[key]=val) with it’s frozenset, although this behavior could be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.automata.PFA.html" class="btn btn-neutral float-left" title="DESops.automata.PFA module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.automata.event.html" class="btn btn-neutral float-right" title="DESops.automata.event module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

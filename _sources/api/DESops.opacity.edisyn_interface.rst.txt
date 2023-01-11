@@ -1,0 +1,7 @@
+DESops.opacity.edisyn\_interface module
+=======================================
+
+.. automodule:: DESops.opacity.edisyn_interface
+   :members:
+   :undoc-members:
+   :show-inheritance:

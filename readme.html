@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Readme &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="DESops.opacity.secret_specification module" href="api/DESops.opacity.secret_specification.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">DESops API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Readme</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-clone-repository">Step 1: Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-install-pkg-config-and-cairo">Step 2: Install pkg-config and cairo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-install-poetry">Step 3: Install Poetry:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#os-x-linux-bashonwindows">OS X / Linux / BashOnWindows:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows-powershell">Windows Powershell:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alternative-method">Alternative Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-error-operating-device-does-not-recognize-pip">Common Error: Operating device does not recognize pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-install-desops">Step 4: Install DESops:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note-for-windows-users">Note for Windows Users:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-using-desops">Step 5: Using DESops:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#random-automata-generation">Random Automata Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opacity-enforcement">Opacity enforcement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-desops">Contributing to DESops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#before-pushing-your-contribution-to-the-repository">Before pushing your contribution to the repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Readme</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/readme.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="readme">
+<h1>Readme<a class="headerlink" href="#readme" title="Permalink to this heading"></a></h1>
+<p>This package provides a convenient way of handling Discrete Event System models as
+finite state automata. Additionally, some useful functions and operations on automata have been
+implemented, including parallel/product compositions and observer computation. The goal is to provide a simple way to combine these operations in a modular environment, with the usability of Python which makes extending the functionalities provided here very straightforward.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>Below is a diagram that showcases the installation process. Before installing DESops, the first three steps must be completed first.</p>
+<a class="reference external image-reference" href="img/diagram.png"><img alt="README_diagram graph image" src="img/diagram.png" /></a>
+<section id="step-1-clone-repository">
+<h3>Step 1: Clone Repository<a class="headerlink" href="#step-1-clone-repository" title="Permalink to this heading"></a></h3>
+<p>On the right hand corner of this page, click on the blue box that says <code class="docutils literal notranslate"><span class="pre">Clone</span></code>. Copy and paste the HTTPS url.</p>
+<p>In your working directory, write the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://gitlab.eecs.umich.edu/M-DES-tools/desops.git
+</pre></div>
+</div>
+<p>After running this command, a copy of this repository will be available in your working directory.</p>
+</section>
+<section id="step-2-install-pkg-config-and-cairo">
+<h3>Step 2: Install pkg-config and cairo<a class="headerlink" href="#step-2-install-pkg-config-and-cairo" title="Permalink to this heading"></a></h3>
+<p>These packages are dependencies required to install <code class="docutils literal notranslate"><span class="pre">pycairo</span></code>. This is key for the later installation of <code class="docutils literal notranslate"><span class="pre">python-igraph</span></code>, which DESops uses to plot graphs.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code> and <code class="docutils literal notranslate"><span class="pre">cairo</span></code> can be installed at once. Depending on your operating system, you can follow the steps on this <a class="reference external" href="https://pycairo.readthedocs.io/en/latest/getting_started.html">website</a> to properly install these dependencies.
+Do <strong>NOT</strong> install pycairo yet. This will be done in step 4.</p>
+<p>Windows users can skip this step if they use the pre-compiled wheel for pycairo discussed in step 4.</p>
+</section>
+<section id="step-3-install-poetry">
+<h3>Step 3: Install Poetry:<a class="headerlink" href="#step-3-install-poetry" title="Permalink to this heading"></a></h3>
+<p>The recommended way to install poetry is writing the following commands in your terminal:</p>
+</section>
+<section id="os-x-linux-bashonwindows">
+<h3>OS X / Linux / BashOnWindows:<a class="headerlink" href="#os-x-linux-bashonwindows" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python3 -
+</pre></div>
+</div>
+</section>
+<section id="windows-powershell">
+<h3>Windows Powershell:<a class="headerlink" href="#windows-powershell" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py -UseBasicParsing).Content | python3 -
+</pre></div>
+</div>
+</section>
+<section id="alternative-method">
+<h3>Alternative Method<a class="headerlink" href="#alternative-method" title="Permalink to this heading"></a></h3>
+<p>If the method above does not work, you can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to properly install <code class="docutils literal notranslate"><span class="pre">poetry</span></code>. Run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --user poetry
+</pre></div>
+</div>
+</section>
+<section id="common-error-operating-device-does-not-recognize-pip">
+<h3>Common Error: Operating device does not recognize pip<a class="headerlink" href="#common-error-operating-device-does-not-recognize-pip" title="Permalink to this heading"></a></h3>
+<p>Sometimes pip requires a different command depending on your operating system. If the command above did not work, try the following alternatives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3 -m pip install --user poetry
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pip install --user poetry
+</pre></div>
+</div>
+<p>More information and different installation methods are available on the <a class="reference external" href="https://python-poetry.org/">poetry</a> website if needed.</p>
+</section>
+<section id="step-4-install-desops">
+<h3>Step 4: Install DESops:<a class="headerlink" href="#step-4-install-desops" title="Permalink to this heading"></a></h3>
+<p>Make sure you are in the same working directory as the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This should be located where you cloned the repository.</p>
+<p>DESops can be installed using <a class="reference external" href="https://python-poetry.org/">poetry</a> and running the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry install
+</pre></div>
+</div>
+<p>Note that version 1.11.1 of pycairo was specified due to issues with pycairo’s current version 1.20</p>
+</section>
+<section id="note-for-windows-users">
+<h3>Note for Windows Users:<a class="headerlink" href="#note-for-windows-users" title="Permalink to this heading"></a></h3>
+<p>If you skipped step 2, pycairo can be installed from a pre-compiled wheel. downloaded from <a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo">https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo</a>.
+You should download the version named  <code class="docutils literal notranslate"><span class="pre">pycairo-1.21.0-cp&lt;python-version&gt;-cp&lt;python-version&gt;-&lt;windows-version&gt;.whl</span></code>.
+For example, if your python version is 3.8 and you are on 64-bit plat form, you should install <code class="docutils literal notranslate"><span class="pre">pycairo‑1.21.0‑cp38‑cp38‑win_amd64.whl</span></code>.</p>
+<p>Then install using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;path_to&gt;\&lt;pycairo&gt;.whl</span></code>.
+You will then need to run <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code> as described above.</p>
+</section>
+<section id="step-5-using-desops">
+<h3>Step 5: Using DESops:<a class="headerlink" href="#step-5-using-desops" title="Permalink to this heading"></a></h3>
+<p>Once you have installed DESops with poetry, you can use the library in a number of ways.
+The simplest way is to run <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span></code>.
+This will open a python environment with all of the dependencies for DESops.
+You can test the installation by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">DESops</span> <span class="k">as</span> <span class="nn">d</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">DFA</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Alternatively in your terminal, you can create a shell where the <code class="docutils literal notranslate"><span class="pre">python</span></code> command refers to the poetry environment by running <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code>.
+Any python commands you after this step will run with the DESops environment.</p>
+<p>Finally, many IDEs like PyCharm and VSCode have plugins available for working with poetry environments.</p>
+<p>Once you have a working environment, you can follow the tutorials linked at the bottom of this page to get started using DESops.</p>
+<section id="random-automata-generation">
+<h4>Random Automata Generation<a class="headerlink" href="#random-automata-generation" title="Permalink to this heading"></a></h4>
+<p>Generating random automata using the <code class="docutils literal notranslate"><span class="pre">random_DFA</span></code> submodule requires the REGAL software package, with source code bundled in this repository.
+The following is only relevant for using the <code class="docutils literal notranslate"><span class="pre">random_DFA</span></code> submodule.
+(link to DESops/random_DFA/regal-1.08.0929/COPYING) Some of the files in the library have been modified, so an external installation of the software won’t work.</p>
+<p>There are detailed instructions for compiling the source code in the file <code class="docutils literal notranslate"><span class="pre">random_DFA/regal-1.08.0929/regal_readme.txt</span></code>
+There are several required libraries, and a c++ compiler is needed to build the REGAL executables. The script <code class="docutils literal notranslate"><span class="pre">build.py</span></code> (only for Linux systems with a g++ compiler) automates the build process after the preqrequisite libraries are installed.</p>
+</section>
+<section id="opacity-enforcement">
+<h4>Opacity enforcement<a class="headerlink" href="#opacity-enforcement" title="Permalink to this heading"></a></h4>
+<p>Two methods for synthesizing enforcement mechanisms for opacity are currently supported. The first requires the optional
+python library <a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/EdiSyn">EdiSyn</a>. To install EdiSyn in an appropriate directory
+, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://gitlab.eecs.umich.edu/M-DES-tools/EdiSyn.git
+</pre></div>
+</div>
+<p>Then edit <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> to point to this directory. You will need to uncomment this line. For development EdiSyn can be used in the editable mode.
+Finally, to use this optional dependency, use the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry install --extras &quot;opacity_enf&quot;
+</pre></div>
+</div>
+<p>The second method for opacity enforcement uses the library BoSy. See (/DESops/opacity/bosy) for more details.</p>
+</section>
+</section>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h2>
+<p>Documentation for most functions are provided as docstings in the code.
+Additional documentation is managed by sphinx. To enable this run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span> <span class="pre">--extras</span> <span class="pre">docs</span></code>.
+The documentation can then be built with the commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs
+$ poetry run make html
+</pre></div>
+</div>
+<p>View the documentation at <code class="docutils literal notranslate"><span class="pre">docs/build/html/index.html</span></code> with a web browser.</p>
+<p>To update or add to the documentation, in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory run the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry run make buildapi
+</pre></div>
+</div>
+<p>Note that this generates new docs, overwriting existing docs.
+Additionally, the documentation will need to be rebuilt after this step.</p>
+</section>
+<section id="contributing-to-desops">
+<h2>Contributing to DESops<a class="headerlink" href="#contributing-to-desops" title="Permalink to this heading"></a></h2>
+<p>You will need <a class="reference external" href="https://python-poetry.org/">Poetry</a> to start contribution on the DESops codes.</p>
+<p>First, you will need to clone the repository using <code class="docutils literal notranslate"><span class="pre">git</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone git@gitlab.eecs.umich.edu:M-DES-tools/desops.git
+$ cd desops
+</pre></div>
+</div>
+<p>Second, you will need to install the required dependencies and <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> git hooks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry install
+$ poetry run pre-commit install
+</pre></div>
+</div>
+<section id="before-pushing-your-contribution-to-the-repository">
+<h3>Before pushing your contribution to the repository<a class="headerlink" href="#before-pushing-your-contribution-to-the-repository" title="Permalink to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> checks the code style and fix it if necessary every time the code
+changes are committed. When <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> fixes the code style, <code class="docutils literal notranslate"><span class="pre">git</span></code> automatically
+reverts your <code class="docutils literal notranslate"><span class="pre">commit</span></code> command, so you will need to stage your changes again.</p>
+<p>This repository employs <a class="reference external" href="https://docs.pytest.org/en/latest/">pytest</a> to write tests.
+All tests are located in <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory, and must be written with the formats of
+<code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
+<p>You can execute tests by the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry run pytest
+</pre></div>
+</div>
+<p>You can also execute certain tests by specifying test names:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry run pytest -k [name]
+</pre></div>
+</div>
+<p>For example, if you want to do the test defined by <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">test_example():</span></code>, pass its name to <code class="docutils literal notranslate"><span class="pre">pytest</span></code> as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ poetry run pytest -k example
+</pre></div>
+</div>
+<p>For other options of <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, see <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">pytest</span> <span class="pre">--help</span></code>.</p>
+</section>
+<section id="additional-resources">
+<h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading"></a></h3>
+<p>For tutorials, demonstrations, and further information about DESops, please check out the following resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=xZAt-nGIQ-E">Installation Tutorial</a></p></li>
+<li><p><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops/-/blob/master/jupyter-tutorials/desops_tutorial_01.ipynb">DESops Tutorial 1</a></p></li>
+<li><p><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops/-/blob/master/jupyter-tutorials/desops_tutorial_02.ipynb">DESops Tutorial 2</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/channel/UCaoigOnm8eGMC7nslwd5-BA">Youtube Channel</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api/DESops.opacity.secret_specification.html" class="btn btn-neutral float-left" title="DESops.opacity.secret_specification module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

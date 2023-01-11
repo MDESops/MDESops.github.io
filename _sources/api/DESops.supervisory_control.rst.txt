@@ -1,0 +1,24 @@
+DESops.supervisory\_control package
+===================================
+
+.. automodule:: DESops.supervisory_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.supervisory_control.AES
+   DESops.supervisory_control.VLPPO
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.supervisory_control.supervisor

@@ -1,0 +1,7 @@
+DESops.supervisory\_control.supervisor module
+=============================================
+
+.. automodule:: DESops.supervisory_control.supervisor
+   :members:
+   :undoc-members:
+   :show-inheritance:

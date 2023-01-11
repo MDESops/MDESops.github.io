@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.basic_operations package &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.basic_operations.composition module" href="DESops.basic_operations.composition.html" />
+    <link rel="prev" title="DESops.automata.event module" href="DESops.automata.event.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DESops.basic_operations package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.composition.html">DESops.basic_operations.composition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.construct_complement.html">DESops.basic_operations.construct_complement module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.construct_reverse.html">DESops.basic_operations.construct_reverse module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html">DESops.basic_operations.cycle_detection module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.generic_functions.html">DESops.basic_operations.generic_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html">DESops.basic_operations.language_equivalence module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.product_NFA.html">DESops.basic_operations.product_NFA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.transducers.html">DESops.basic_operations.transducers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.unary.html">DESops.basic_operations.unary module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.basic_operations.ureach.html">DESops.basic_operations.ureach module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.html">DESops.opacity package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+      <li class="breadcrumb-item active">DESops.basic_operations package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.basic_operations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.basic_operations">
+<span id="desops-basic-operations-package"></span><h1>DESops.basic_operations package<a class="headerlink" href="#module-DESops.basic_operations" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.composition.html">DESops.basic_operations.composition module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.observer"><code class="docutils literal notranslate"><span class="pre">observer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.parallel"><code class="docutils literal notranslate"><span class="pre">parallel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.parallel_bfs"><code class="docutils literal notranslate"><span class="pre">parallel_bfs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.parallel_linear"><code class="docutils literal notranslate"><span class="pre">parallel_linear()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.product"><code class="docutils literal notranslate"><span class="pre">product()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.product_bfs"><code class="docutils literal notranslate"><span class="pre">product_bfs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.product_linear"><code class="docutils literal notranslate"><span class="pre">product_linear()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.composition.html#DESops.basic_operations.composition.strict_subautomata"><code class="docutils literal notranslate"><span class="pre">strict_subautomata()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.construct_complement.html">DESops.basic_operations.construct_complement module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.construct_complement.html#DESops.basic_operations.construct_complement.complement"><code class="docutils literal notranslate"><span class="pre">complement()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.construct_reverse.html">DESops.basic_operations.construct_reverse module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.construct_reverse.html#DESops.basic_operations.construct_reverse.reverse"><code class="docutils literal notranslate"><span class="pre">reverse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html">DESops.basic_operations.cycle_detection module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.create_sub_graph"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm.create_sub_graph()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.find_least_vertex"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm.find_least_vertex()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.is_self_loop"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm.is_self_loop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.simple_cycles"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm.simple_cycles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.simple_cycles_util"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm.simple_cycles_util()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.JohnsonsAlgorithm.unblock"><code class="docutils literal notranslate"><span class="pre">JohnsonsAlgorithm.unblock()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.TarjansAlgorithm"><code class="docutils literal notranslate"><span class="pre">TarjansAlgorithm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.TarjansAlgorithm.DFS"><code class="docutils literal notranslate"><span class="pre">TarjansAlgorithm.DFS()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.TarjansAlgorithm.strongly_connected_components"><code class="docutils literal notranslate"><span class="pre">TarjansAlgorithm.strongly_connected_components()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.contains_cycle"><code class="docutils literal notranslate"><span class="pre">contains_cycle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.contains_cycle_util"><code class="docutils literal notranslate"><span class="pre">contains_cycle_util()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.cycle_detection.html#DESops.basic_operations.cycle_detection.is_self_loop"><code class="docutils literal notranslate"><span class="pre">is_self_loop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.generic_functions.html">DESops.basic_operations.generic_functions module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.find_E"><code class="docutils literal notranslate"><span class="pre">find_E()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.find_Euc"><code class="docutils literal notranslate"><span class="pre">find_Euc()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.find_Euo"><code class="docutils literal notranslate"><span class="pre">find_Euo()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.find_obs_contr"><code class="docutils literal notranslate"><span class="pre">find_obs_contr()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.next_state_symbolic"><code class="docutils literal notranslate"><span class="pre">next_state_symbolic()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.obs_events_symbolic"><code class="docutils literal notranslate"><span class="pre">obs_events_symbolic()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.symbolic_observer"><code class="docutils literal notranslate"><span class="pre">symbolic_observer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.ureach_symbolic"><code class="docutils literal notranslate"><span class="pre">ureach_symbolic()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.generic_functions.html#DESops.basic_operations.generic_functions.write_transition_attributes"><code class="docutils literal notranslate"><span class="pre">write_transition_attributes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html">DESops.basic_operations.language_equivalence module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html#DESops.basic_operations.language_equivalence.compare_language"><code class="docutils literal notranslate"><span class="pre">compare_language()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html#DESops.basic_operations.language_equivalence.compare_language_generated"><code class="docutils literal notranslate"><span class="pre">compare_language_generated()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html#DESops.basic_operations.language_equivalence.compare_language_marked"><code class="docutils literal notranslate"><span class="pre">compare_language_marked()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html#DESops.basic_operations.language_equivalence.composition"><code class="docutils literal notranslate"><span class="pre">composition()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.language_equivalence.html#DESops.basic_operations.language_equivalence.inclusion"><code class="docutils literal notranslate"><span class="pre">inclusion()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.product_NFA.html">DESops.basic_operations.product_NFA module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.product_NFA.html#DESops.basic_operations.product_NFA.product_NFA"><code class="docutils literal notranslate"><span class="pre">product_NFA()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.transducers.html">DESops.basic_operations.transducers module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.auto_auto_parallel_comp"><code class="docutils literal notranslate"><span class="pre">auto_auto_parallel_comp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.auto_auto_product"><code class="docutils literal notranslate"><span class="pre">auto_auto_product()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.generic_product"><code class="docutils literal notranslate"><span class="pre">generic_product()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.transducer_auto_product"><code class="docutils literal notranslate"><span class="pre">transducer_auto_product()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.transducer_input_automaton"><code class="docutils literal notranslate"><span class="pre">transducer_input_automaton()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.transducer_output_automaton"><code class="docutils literal notranslate"><span class="pre">transducer_output_automaton()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.transducers.html#DESops.basic_operations.transducers.transducer_transducer_product"><code class="docutils literal notranslate"><span class="pre">transducer_transducer_product()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.unary.html">DESops.basic_operations.unary module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.unary.html#DESops.basic_operations.unary.construct_acc"><code class="docutils literal notranslate"><span class="pre">construct_acc()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.unary.html#DESops.basic_operations.unary.construct_coac"><code class="docutils literal notranslate"><span class="pre">construct_coac()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.unary.html#DESops.basic_operations.unary.construct_trim"><code class="docutils literal notranslate"><span class="pre">construct_trim()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.unary.html#DESops.basic_operations.unary.find_inacc"><code class="docutils literal notranslate"><span class="pre">find_inacc()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.unary.html#DESops.basic_operations.unary.find_incoacc"><code class="docutils literal notranslate"><span class="pre">find_incoacc()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.unary.html#DESops.basic_operations.unary.find_non_trim"><code class="docutils literal notranslate"><span class="pre">find_non_trim()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.basic_operations.ureach.html">DESops.basic_operations.ureach module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.extended_ureach"><code class="docutils literal notranslate"><span class="pre">extended_ureach()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.extended_ureach_from_set"><code class="docutils literal notranslate"><span class="pre">extended_ureach_from_set()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.extended_ureach_from_set_adj"><code class="docutils literal notranslate"><span class="pre">extended_ureach_from_set_adj()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.unobservable_reach"><code class="docutils literal notranslate"><span class="pre">unobservable_reach()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.ureach_from_set"><code class="docutils literal notranslate"><span class="pre">ureach_from_set()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.ureach_from_set_adj"><code class="docutils literal notranslate"><span class="pre">ureach_from_set_adj()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.ureach_from_set_adjdict"><code class="docutils literal notranslate"><span class="pre">ureach_from_set_adjdict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.ureach_from_set_adjlist"><code class="docutils literal notranslate"><span class="pre">ureach_from_set_adjlist()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.ureach.html#DESops.basic_operations.ureach.ureach_ignore_states"><code class="docutils literal notranslate"><span class="pre">ureach_ignore_states()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.automata.event.html" class="btn btn-neutral float-left" title="DESops.automata.event module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.basic_operations.composition.html" class="btn btn-neutral float-right" title="DESops.basic_operations.composition module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

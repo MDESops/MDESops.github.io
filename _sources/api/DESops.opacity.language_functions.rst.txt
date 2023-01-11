@@ -1,0 +1,7 @@
+DESops.opacity.language\_functions module
+=========================================
+
+.. automodule:: DESops.opacity.language_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:

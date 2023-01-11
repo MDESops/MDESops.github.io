@@ -1,0 +1,15 @@
+DESops.diagnoser package
+========================
+
+.. automodule:: DESops.diagnoser
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DESops.diagnoser.diagnoser

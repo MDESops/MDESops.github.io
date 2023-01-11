@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESops.opacity package &mdash; MDESops 20.9.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DESops.opacity.bisimulation module" href="DESops.opacity.bisimulation.html" />
+    <link rel="prev" title="DESops.basic_operations.ureach module" href="DESops.basic_operations.ureach.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDESops
+          </a>
+              <div class="version">
+                20.9.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">DESops API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DESops.automata.html">DESops.automata package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.basic_operations.html">DESops.basic_operations package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DESops.opacity package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.bisimulation.html">DESops.opacity.bisimulation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.contract_secret_traces.html">DESops.opacity.contract_secret_traces module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edisyn_interface.html">DESops.opacity.edisyn_interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.edit_automaton.html">DESops.opacity.edit_automaton module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_language_comparison.html">DESops.opacity.k_step_language_comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_state_observer.html">DESops.opacity.k_step_state_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html">DESops.opacity.k_step_trajectory_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html">DESops.opacity.k_step_two_way_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.label_transform.html">DESops.opacity.label_transform module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.language_functions.html">DESops.opacity.language_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.observation_map.html">DESops.opacity.observation_map module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.opacity_verification.html">DESops.opacity.opacity_verification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_observer.html">DESops.opacity.secret_observer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DESops.opacity.secret_specification.html">DESops.opacity.secret_specification module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.eecs.umich.edu/M-DES-tools/desops">Gitlab</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDESops</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">DESops API</a></li>
+      <li class="breadcrumb-item active">DESops.opacity package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/DESops.opacity.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-DESops.opacity">
+<span id="desops-opacity-package"></span><h1>DESops.opacity package<a class="headerlink" href="#module-DESops.opacity" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.bisimulation.html">DESops.opacity.bisimulation module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.bisimulation.html#DESops.opacity.bisimulation.construct_bisimulation"><code class="docutils literal notranslate"><span class="pre">construct_bisimulation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.bisimulation.html#DESops.opacity.bisimulation.construct_simulation"><code class="docutils literal notranslate"><span class="pre">construct_simulation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.bisimulation.html#DESops.opacity.bisimulation.find_coarsest_similar_partition"><code class="docutils literal notranslate"><span class="pre">find_coarsest_similar_partition()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.contract_secret_traces.html">DESops.opacity.contract_secret_traces module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.contract_secret_traces.html#DESops.opacity.contract_secret_traces.contract_secret_traces"><code class="docutils literal notranslate"><span class="pre">contract_secret_traces()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.edisyn_interface.html">DESops.opacity.edisyn_interface module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.edisyn_interface.html#DESops.opacity.edisyn_interface.apply_edisyn"><code class="docutils literal notranslate"><span class="pre">apply_edisyn()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.edisyn_interface.html#DESops.opacity.edisyn_interface.check_edisyn"><code class="docutils literal notranslate"><span class="pre">check_edisyn()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.edisyn_interface.html#DESops.opacity.edisyn_interface.enforce_state_based_opacity_edisyn"><code class="docutils literal notranslate"><span class="pre">enforce_state_based_opacity_edisyn()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.edisyn_interface.html#DESops.opacity.edisyn_interface.trivial_utility"><code class="docutils literal notranslate"><span class="pre">trivial_utility()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.edit_automaton.html">DESops.opacity.edit_automaton module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.k_step_language_comparison.html">DESops.opacity.k_step_language_comparison module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.k_step_language_comparison.html#DESops.opacity.k_step_language_comparison.verify_k_step_opacity_language_comparison"><code class="docutils literal notranslate"><span class="pre">verify_k_step_opacity_language_comparison()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.k_step_state_observer.html">DESops.opacity.k_step_state_observer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.k_step_state_observer.html#DESops.opacity.k_step_state_observer.verify_k_step_opacity_state_observer"><code class="docutils literal notranslate"><span class="pre">verify_k_step_opacity_state_observer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html">DESops.opacity.k_step_trajectory_estimator module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html#DESops.opacity.k_step_trajectory_estimator.construct_k_delay_estimator"><code class="docutils literal notranslate"><span class="pre">construct_k_delay_estimator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.k_step_trajectory_estimator.html#DESops.opacity.k_step_trajectory_estimator.verify_k_step_opacity_trajectory_based"><code class="docutils literal notranslate"><span class="pre">verify_k_step_opacity_trajectory_based()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html">DESops.opacity.k_step_two_way_observer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html#DESops.opacity.k_step_two_way_observer.first_k_observer"><code class="docutils literal notranslate"><span class="pre">first_k_observer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.k_step_two_way_observer.html#DESops.opacity.k_step_two_way_observer.verify_separate_k_step_opacity_TWO"><code class="docutils literal notranslate"><span class="pre">verify_separate_k_step_opacity_TWO()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.label_transform.html">DESops.opacity.label_transform module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.label_transform.html#DESops.opacity.label_transform.induced_observation_map"><code class="docutils literal notranslate"><span class="pre">induced_observation_map()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.label_transform.html#DESops.opacity.label_transform.label_transform"><code class="docutils literal notranslate"><span class="pre">label_transform()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.label_transform.html#DESops.opacity.label_transform.transform_secret_labels"><code class="docutils literal notranslate"><span class="pre">transform_secret_labels()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.language_functions.html">DESops.opacity.language_functions module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.H_epoch_NS"><code class="docutils literal notranslate"><span class="pre">H_epoch_NS()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.H_epoch_all"><code class="docutils literal notranslate"><span class="pre">H_epoch_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.H_infinite_NS"><code class="docutils literal notranslate"><span class="pre">H_infinite_NS()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.H_star"><code class="docutils literal notranslate"><span class="pre">H_star()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.construct_H_NS"><code class="docutils literal notranslate"><span class="pre">construct_H_NS()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.find_path_between"><code class="docutils literal notranslate"><span class="pre">find_path_between()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.language_inclusion"><code class="docutils literal notranslate"><span class="pre">language_inclusion()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.language_functions.html#DESops.opacity.language_functions.moore_to_standard"><code class="docutils literal notranslate"><span class="pre">moore_to_standard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.observation_map.html">DESops.opacity.observation_map module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.NonDetDynamicMask"><code class="docutils literal notranslate"><span class="pre">NonDetDynamicMask</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.NonDetDynamicMask.apply_obs_map"><code class="docutils literal notranslate"><span class="pre">NonDetDynamicMask.apply_obs_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.NonDetDynamicMask.check_applicable"><code class="docutils literal notranslate"><span class="pre">NonDetDynamicMask.check_applicable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.NonDetDynamicMask.compose"><code class="docutils literal notranslate"><span class="pre">NonDetDynamicMask.compose()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.NonDetDynamicMask.copy"><code class="docutils literal notranslate"><span class="pre">NonDetDynamicMask.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.NonDetDynamicMask.prepend_observation"><code class="docutils literal notranslate"><span class="pre">NonDetDynamicMask.prepend_observation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap"><code class="docutils literal notranslate"><span class="pre">ObservationMap</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap.apply_obs_map"><code class="docutils literal notranslate"><span class="pre">ObservationMap.apply_obs_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap.check_applicable"><code class="docutils literal notranslate"><span class="pre">ObservationMap.check_applicable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap.compose"><code class="docutils literal notranslate"><span class="pre">ObservationMap.compose()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap.epsilon"><code class="docutils literal notranslate"><span class="pre">ObservationMap.epsilon</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.ObservationMap.prepend_observation"><code class="docutils literal notranslate"><span class="pre">ObservationMap.prepend_observation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.add_observation"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.add_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.apply_obs_map"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.apply_obs_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.check_applicable"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.check_applicable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.compose"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.compose()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.copy"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.prepend_observation"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.prepend_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.remove_observation"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.remove_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.to_NonDetDynamicMask"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.to_NonDetDynamicMask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.SetValuedStaticMask.unobservable_events"><code class="docutils literal notranslate"><span class="pre">SetValuedStaticMask.unobservable_events()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask"><code class="docutils literal notranslate"><span class="pre">StaticMask</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.apply_obs_map"><code class="docutils literal notranslate"><span class="pre">StaticMask.apply_obs_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.check_applicable"><code class="docutils literal notranslate"><span class="pre">StaticMask.check_applicable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.compose"><code class="docutils literal notranslate"><span class="pre">StaticMask.compose()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.copy"><code class="docutils literal notranslate"><span class="pre">StaticMask.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.prepend_observation"><code class="docutils literal notranslate"><span class="pre">StaticMask.prepend_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.to_NonDetDynamicMask"><code class="docutils literal notranslate"><span class="pre">StaticMask.to_NonDetDynamicMask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.StaticMask.unobservable_events"><code class="docutils literal notranslate"><span class="pre">StaticMask.unobservable_events()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.observation_map.html#DESops.opacity.observation_map.observable_projection_map"><code class="docutils literal notranslate"><span class="pre">observable_projection_map()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.opacity_verification.html">DESops.opacity.opacity_verification module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.opacity_verification.html#DESops.opacity.opacity_verification.verify_current_state_opacity"><code class="docutils literal notranslate"><span class="pre">verify_current_state_opacity()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.opacity_verification.html#DESops.opacity.opacity_verification.verify_infinite_step_opacity"><code class="docutils literal notranslate"><span class="pre">verify_infinite_step_opacity()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.opacity_verification.html#DESops.opacity.opacity_verification.verify_initial_state_opacity"><code class="docutils literal notranslate"><span class="pre">verify_initial_state_opacity()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.opacity_verification.html#DESops.opacity.opacity_verification.verify_k_step_opacity"><code class="docutils literal notranslate"><span class="pre">verify_k_step_opacity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.secret_observer.html">DESops.opacity.secret_observer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_observer.html#DESops.opacity.secret_observer.construct_secret_observer"><code class="docutils literal notranslate"><span class="pre">construct_secret_observer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_observer.html#DESops.opacity.secret_observer.construct_secret_observer_label_transform"><code class="docutils literal notranslate"><span class="pre">construct_secret_observer_label_transform()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_observer.html#DESops.opacity.secret_observer.is_obs_state_secret"><code class="docutils literal notranslate"><span class="pre">is_obs_state_secret()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_observer.html#DESops.opacity.secret_observer.tmp_verify_edit_opacity"><code class="docutils literal notranslate"><span class="pre">tmp_verify_edit_opacity()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_observer.html#DESops.opacity.secret_observer.verify_opacity_secret_observer"><code class="docutils literal notranslate"><span class="pre">verify_opacity_secret_observer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DESops.opacity.secret_specification.html">DESops.opacity.secret_specification module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.OpacityNotion"><code class="docutils literal notranslate"><span class="pre">OpacityNotion</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.OpacityNotion.CSO"><code class="docutils literal notranslate"><span class="pre">OpacityNotion.CSO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.OpacityNotion.INFSTEP"><code class="docutils literal notranslate"><span class="pre">OpacityNotion.INFSTEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.OpacityNotion.ISO"><code class="docutils literal notranslate"><span class="pre">OpacityNotion.ISO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.OpacityNotion.KDELAY"><code class="docutils literal notranslate"><span class="pre">OpacityNotion.KDELAY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.OpacityNotion.KSTEP"><code class="docutils literal notranslate"><span class="pre">OpacityNotion.KSTEP</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.construct_nonsecret_spec"><code class="docutils literal notranslate"><span class="pre">construct_nonsecret_spec()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.current_state_spec"><code class="docutils literal notranslate"><span class="pre">current_state_spec()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.initial_state_spec"><code class="docutils literal notranslate"><span class="pre">initial_state_spec()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.joint_infinite_step_spec"><code class="docutils literal notranslate"><span class="pre">joint_infinite_step_spec()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DESops.opacity.secret_specification.html#DESops.opacity.secret_specification.k_delay_spec"><code class="docutils literal notranslate"><span class="pre">k_delay_spec()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DESops.basic_operations.ureach.html" class="btn btn-neutral float-left" title="DESops.basic_operations.ureach module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DESops.opacity.bisimulation.html" class="btn btn-neutral float-right" title="DESops.opacity.bisimulation module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of Michigan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
